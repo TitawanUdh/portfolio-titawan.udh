@@ -1,3 +1,154 @@
+
+.brand-text {
+  text-align: left; /* Aligns the text to the left */
+}
+.bg-body-tertiary{
+  background-color: none
+}
+
+/* main page */
+.animated-image {
+  animation: mymove 1s ;
+}
+
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.start-animation {
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.end-animation {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bottom-animation {
+  animation: slideInFromBottom 2s ease-out;
+}
+
+.border-img {
+  border: 6px solid #FF8E26; /* Border style, width, and color */
+  border-radius: 20px;
+  padding: 2px;
+}
+.text-header{
+  font-size: 100px;
+  color: #FF8E26;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-left: 100px;
+}
+
+.text-title {
+  font-size: 20px;
+  color: #D541FF;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 54px;
+}
+.text-header-grey{
+  font-size: 100px;
+  color: #646464;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-left: 105px;
+  margin-top: 5px;
+}
+.text-sub-header-surname{
+  font-size: 30px;
+  color: #FF8E26;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.text-sub-header-name{
+  font-size: 60px;
+  color: #FF8E26;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.text-position{
+  font-size: 20px;
+  color: #646464;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right: 40px;
+  text-align: end;
+}
+
+/* Skill Page */
+.text-header-title{
+  font-size: 70px;
+  color: #FF8E26;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-top: 30px;
+  margin-left: 50px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  background-color: #FF8E26;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background-color: rgb(22, 22, 22); /* Change to your desired track color */
+}
+.pointer-events{
+  pointer-events: auto !important;
+}
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
