@@ -146,9 +146,43 @@ input[type='range']::-webkit-slider-runnable-track {
 .pointer-events{
   pointer-events: auto !important;
 }
+.img-size{
+  object-fit: cover;
+  max-width: 300px
 
+}
+/* experience page */
+.card-info {
+  /* background-color: #F1E1E2; */
+  padding: 20px;
+  margin: 30px 100px;
+  border: none;
+}
 
+.carousel-control-next-icon{
+  padding: 0px;
+  margin: 0px;
+  color: black;
+  background-color: black;
+}
 
+.carousel-control-prev-icon{
+  color: black;
+  background-color: black;
+
+}
+.carousel{
+  position:none;
+}
+
+div.card-opacity{
+  color: #000000;
+
+}
+
+.sub-text-info{
+  color: black;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -1,6 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import imgBg from "../images/background.png";
-import { Card, Form, ProgressBar } from "react-bootstrap";
+import imgCer1 from "../images/CER-1.png";
+import imgCer2 from "../images/CER-2.png";
+import imgCer3 from "../images/CER-3.png";
+import imgPhotoL1 from "../images/PIC-L1.jpg";
+import imgPhotoL2 from "../images/PIC-L2.jpg";
+import imgPhotoL3 from "../images/PIC-L3.jpg";
+import imgPhotoL4 from "../images/PIC-L4.jpg";
+import imgPhotoL5 from "../images/PIC-L5.jpg";
+import imgPhotoL6 from "../images/PIC-L6.jpg";
+import imgPhotoL7 from "../images/PIC-L7.jpg";
+import imgPhotoL8 from "../images/PIC-L8.jpg";
+import imgPhotoL9 from "../images/PIC-L9.jpg";
+import imgPhotoL10 from "../images/PIC-L10.jpg";
+import imgPhotoL11 from "../images/PIC-L11.jpg";
+import imgPhotoL12 from "../images/PIC-L12.jpg";
+import {
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  Card,
+  Form,
+  Image,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
+import { Modal } from "antd";
 
 function SkillsPage() {
   const skills = [
@@ -8,48 +33,173 @@ function SkillsPage() {
       id: 0,
       skill: "HTML",
       percent: 95,
-   
+
       detail:
-        "xxxx xx xxxxxx xxxxx xxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxx xxxx xx  xxxxxx xxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxxxxxx xxx xxxxx xxxxxxx xxxxxxx xxx x x",
+        "When I was study in university. I was study about programming class, that's class inspire to programming passion for me and that I try to find the way to learning by myself such as take online class, ask my friend about this skill and etc.",
+      detailImg: [],
     },
     {
       id: 1,
       skill: "CSS",
       percent: 75,
-      detail: "xxx xx xxx  xxxxxxx xxx xx xx xxxxx xxxx xxx xxx xxxx xx x",
+      detail:
+        "When I was study in university. I was study about programming class, that's class inspire to programming passion for me and that I try to find the way to learning by myself such as take online class, ask my friend about this skill and etc.",
+      detailImg: [],
     },
     {
       id: 2,
       skill: "Javascript",
       percent: 70,
-      detail: "xxx xx xxx  xxxxxxx xxx xx xx xxxxx xxxx xxx xxx xxxx xx x",
+      detail:
+        "I know this language when I got my first job at SKYICT, that's make me understand programming more and then I have to take a lot of online course because I still a beginner Developer, so I take course at Future Skill",
+      detailImg: [
+        {
+          id: 1,
+          typeName: "Certificate",
+          type: [
+            {
+              id: 1,
+              img: `${imgCer3}`,
+              detail: "Basic Javascript for Frontend Developer",
+            },
+            {
+              id: 2,
+              img: `${imgCer2}`,
+              detail: "Basic React 1: ความรู้พื้นฐานสำหรับ Components และ JSX",
+            },
+            {
+              id: 3,
+              img: `${imgCer1}`,
+              detail:
+                "Basic React 4: ฟังก์ชั่น Hook พื้นฐาน (Basic React Hooks)",
+            },
+          ],
+        },
+      ],
     },
     {
       id: 3,
       skill: "UX/ UI",
       percent: 80,
-      detail: "xxx xx xxx  xxxxxxx xxx xx xx xxxxx xxxx xxx xxx xxxx xx x",
+      detail:
+        "When I was study in university. I was study about designing webpage, also I was have designing skill and when I work at SKYICT I often design the webpage by myself because UX/UI position I my old company have just one person but we have a lot of project, so it's make me practice my UX/UI skill",
+      detailImg: [],
     },
     {
       id: 4,
       skill: "Graphic Design",
       percent: 80,
-      detail: "xxx xx xxx  xxxxxxx xxx xx xx xxxxx xxxx xxx xxx xxxx xx x",
+      detail:
+        "I was take a lot of course about graphic when I studying in university and artwork is my hobby, so I alway be fun when I do it",
+      detailImg: [],
     },
     {
       id: 5,
       skill: "Photography",
       percent: 90,
-      detail: "xxx xx xxx  xxxxxxx xxx xx xx xxxxx xxxx xxx xxx xxxx xx x",
+      detail:
+        "Photograph is my favorite hobby, and I was take this thing to my second job when I was studying",
+      detailImg: [
+        {
+          id: 1,
+          typeName: "Landscape",
+          type: [
+            {
+              id: 1,
+              img: `${imgPhotoL1}`,
+              detail: "Landscape",
+            },
+            {
+              id: 2,
+              img: `${imgPhotoL2}`,
+              detail: "Landscape",
+            },
+            {
+              id: 3,
+              img: `${imgPhotoL3}`,
+              detail: "Landscape",
+            },
+            {
+              id: 4,
+              img: `${imgPhotoL4}`,
+              detail: "Landscape",
+            },
+            {
+              id: 5,
+              img: `${imgPhotoL5}`,
+              detail: "Landscape",
+            },
+            {
+              id: 6,
+              img: `${imgPhotoL6}`,
+              detail: "Landscape",
+            },
+            {
+              id: 8,
+              img: `${imgPhotoL7}`,
+              detail: "Landscape",
+            },
+            {
+              id: 9,
+              img: `${imgPhotoL8}`,
+              detail: "Landscape",
+            },
+            {
+              id: 10,
+              img: `${imgPhotoL9}`,
+              detail: "Landscape",
+            },
+            {
+              id: 11,
+              img: `${imgPhotoL10}`,
+              detail: "Landscape",
+            },
+            {
+              id: 12,
+              img: `${imgPhotoL11}`,
+              detail: "Landscape",
+            },
+            {
+              id: 13,
+              img: `${imgPhotoL12}`,
+              detail: "Landscape",
+            },
+          ],
+        },
+        {
+          id: 2,
+          typeName: "Portrait",
+          type: [
+            {
+              id: 6,
+              img: `${imgPhotoL6}`,
+              detail: "Portrait",
+            },
+          ],
+        },
+      ],
     },
   ];
+
   const [click, setClick] = useState(false);
   const [dataDetail, setDataDetail] = useState([]);
+  const [dataImg, setDataImg] = useState([]);
+  const [isModal, setIsModal] = useState(false);
+  const [dataModal, setDataModal] = useState(false);
+
   const handleClick = (d) => {
     setClick(true);
     setDataDetail(d);
-  
-    console.log('dataDetail', dataDetail);
+    setDataImg(d.detailImg);
+  };
+
+  const handleClickImg = (d) => {
+    setIsModal(true);
+    setDataModal(d ?? []);
+  };
+
+  const handleClose = () => {
+    setIsModal(false);
   };
   return (
     <div
@@ -86,15 +236,63 @@ function SkillsPage() {
         <div className="col-6">
           {click ? (
             <div className="m-4 mt-0 pt-0 position-absolute">
-              <Card className="p-4 border-0 opacity-75"
-              style={{
-                backgroundColor: '#E5EDFA'
-              }}>
+              <Card
+                className="p-4 border-0"
+                style={{
+                  backgroundColor: "rgba(225, 234, 249, 0.8)",
+                }}
+              >
                 <h3>{dataDetail.skill}</h3>
-                <div
-                >
-                  {dataDetail?.detail}
-                </div>
+                <div>{dataDetail?.detail}</div>
+                {dataDetail?.id &&
+                (dataDetail?.id === 2 || dataDetail?.id === 5) ? (
+                  <Card.Body
+                    style={{ width: "600px" }}
+                    className="overflow-auto"
+                  >
+                    {" "}
+                    {dataImg.map((d, i) => (
+                      <div className="d-flex">
+                        <ButtonGroup>
+                          <Button variant="">{d?.typeName}</Button>
+                        </ButtonGroup>
+                      </div>
+                    ))}
+                    <div className="d-flex gap-2">
+                      {dataImg &&
+                        dataImg.map((d, i) => (
+                          <>
+                            {console.log("d", d)}
+                            {console.log("dataImg", dataImg)}
+
+                            {d?.type.map((t, index) => (
+                              <ButtonToolbar>
+                                <OverlayTrigger
+                                  placement="top"
+                                  overlay={
+                                    <Tooltip id="tooltip-detail">
+                                      {t.detail}
+                                    </Tooltip>
+                                  }
+                                >
+                                  <Image
+                                    key={index}
+                                    src={t.img}
+                                    className="img-size"
+                                    onClick={() => {
+                                      handleClickImg(t);
+                                    }}
+                                  />
+                                </OverlayTrigger>
+                              </ButtonToolbar>
+                            ))}
+                          </>
+                        ))}{" "}
+                    </div>
+                  </Card.Body>
+                ) : (
+                  <></>
+                )}
               </Card>
             </div>
           ) : (
@@ -102,6 +300,23 @@ function SkillsPage() {
           )}
         </div>
       </div>
+      {isModal ? (
+        <>
+          <Modal
+            width={600}
+            open={isModal}
+            onCancel={handleClose}
+            cancelButtonProps={{ hidden: true }}
+            okButtonProps={{ hidden: true }}
+          >
+            <div className="d-flex justify-content-center">
+              <Image src={dataModal?.img} style={{ width: "500px" }} />
+            </div>
+          </Modal>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
