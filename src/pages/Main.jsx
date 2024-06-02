@@ -35,9 +35,9 @@ function MainPage() {
                   src={imgPersonal}
                   fluid
                   style={{
-                    width: "400px",
+                    minWidth: "50px",
+                    maxWidth: "500px",
                     borderRadius: "20px",
-                    // animation: 'mymove 5s infinite'
                   }}
                 />
               </span>

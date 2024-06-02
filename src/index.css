@@ -72,8 +72,8 @@
   animation: slideInFromBottom 2s ease-out;
 }
 
-.border-img {
-  border: 6px solid #FF8E26; /* Border style, width, and color */
+/* .border-img {
+  border: 6px solid #FF8E26;
   border-radius: 20px;
   padding: 2px;
 }
@@ -124,6 +124,122 @@
   letter-spacing: 2px;
   margin-right: 40px;
   text-align: end;
+} */
+
+/* For mobile devices */
+@media (max-width: 576px) {
+  .text-header {
+    color: #FF8E26;
+    text-transform: uppercase;
+    font-size: 60px;
+    margin-left: 20px;
+  }
+  .text-header-grey {
+    font-size: 60px;
+    color: #646464;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+  .text-sub-header-name {
+    font-size: 40px;
+    margin-left: 20px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  .text-sub-header-surname {
+    font-size: 20px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-left: 20px;
+  }
+  .text-position {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #646464;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+    text-align: start;
+  }
+}
+
+/* For tablets */
+@media (min-width: 576px) and (max-width: 768px) {
+  .text-header {
+    font-size: 80px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    margin-left: 50px;
+  }
+  .text-header-grey {
+    font-size: 80px;
+    color: #646464;
+    text-transform: uppercase;
+    margin-left: 50px;
+  }
+  .text-sub-header-name {
+    font-size: 50px;
+    margin-left: 50px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  .text-sub-header-surname {
+    font-size: 25px;
+    margin-left: 50px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  .text-position {
+    font-size: 18px;
+    margin-right: 30px;
+    text-align: end;
+    color: #646464;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  }
+}
+
+/* For laptops and desktops */
+@media (min-width: 768px) {
+  .text-header {
+    font-size: 100px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    margin-left: 100px;
+  }
+  .text-header-grey {
+    font-size: 100px;
+    color: #646464;
+    text-transform: uppercase;
+    margin-left: 100px;
+  }
+  .text-sub-header-name {
+    font-size: 60px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    margin-left: 100px;
+  }
+  .text-sub-header-surname {
+    font-size: 30px;
+    color: #FF8E26;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-left: 100px;
+  }
+  .text-position {
+    font-size: 20px;
+    color: #646464;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 40px;
+    text-align: end;
+  }
 }
 
 /* Skill Page */
@@ -139,7 +255,10 @@
 
 input[type='range']::-webkit-slider-thumb {
   background-color: #FF8E26;
+  animation: slideInFromLeft 0.5s ease-in;
 }
+
+
 input[type='range']::-webkit-slider-runnable-track {
   background-color: rgb(22, 22, 22); /* Change to your desired track color */
 }
@@ -183,6 +302,39 @@ div.card-opacity{
 .sub-text-info{
   color: black;
 }
+
+/* contact */
+.name {
+  color:#FF8E26;
+  letter-spacing: 2px;
+  font-size: 40px;
+
+}
+
+.surname {
+  color:#FF8E26;
+  letter-spacing: 2px;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.on-select{
+  background-color: rgba(225, 234, 249, 0.8);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.text-infomation {
+  color:#FF8E26;
+  font-size: 18px;
+}
+
+.bg-grade{
+  background-color: rgba(233, 120, 0, 0.5);
+  border-radius: 8px;
+  padding: 3px 10px 3px 10px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

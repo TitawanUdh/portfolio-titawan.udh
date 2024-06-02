@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import imgBg from "../images/background.png";
 import imgCer1 from "../images/CER-1.png";
 import imgCer2 from "../images/CER-2.png";
@@ -15,6 +15,17 @@ import imgPhotoL9 from "../images/PIC-L9.jpg";
 import imgPhotoL10 from "../images/PIC-L10.jpg";
 import imgPhotoL11 from "../images/PIC-L11.jpg";
 import imgPhotoL12 from "../images/PIC-L12.jpg";
+
+import imgPhotoP1 from "../images/PIC-P1.jpg";
+import imgPhotoP2 from "../images/PIC-P2.jpg";
+import imgPhotoP3 from "../images/PIC-P3.jpg";
+import imgPhotoP4 from "../images/PIC-P4.jpg";
+import imgPhotoP5 from "../images/PIC-P5.jpg";
+import imgPhotoP6 from "../images/PIC-P6.jpg";
+import imgPhotoP7 from "../images/PIC-P7.jpg";
+import imgPhotoP8 from "../images/PIC-I6.jpg";
+import imgPhotoP9 from "../images/PIC-I7.jpg";
+
 import {
   Button,
   ButtonGroup,
@@ -49,7 +60,7 @@ function SkillsPage() {
     {
       id: 2,
       skill: "Javascript",
-      percent: 70,
+      percent: 75,
       detail:
         "I know this language when I got my first job at SKYICT, that's make me understand programming more and then I have to take a lot of online course because I still a beginner Developer, so I take course at Future Skill",
       detailImg: [
@@ -80,7 +91,7 @@ function SkillsPage() {
     {
       id: 3,
       skill: "UX/ UI",
-      percent: 80,
+      percent: 85,
       detail:
         "When I was study in university. I was study about designing webpage, also I was have designing skill and when I work at SKYICT I often design the webpage by myself because UX/UI position I my old company have just one person but we have a lot of project, so it's make me practice my UX/UI skill",
       detailImg: [],
@@ -171,8 +182,38 @@ function SkillsPage() {
           typeName: "Portrait",
           type: [
             {
+              id: 1,
+              img: `${imgPhotoP1}`,
+              detail: "Portrait",
+            },
+            {
+              id: 2,
+              img: `${imgPhotoP2}`,
+              detail: "Portrait",
+            },
+            {
+              id: 3,
+              img: `${imgPhotoP3}`,
+              detail: "Portrait",
+            },
+            {
+              id: 4,
+              img: `${imgPhotoP4}`,
+              detail: "Portrait",
+            },
+            {
+              id: 5,
+              img: `${imgPhotoP5}`,
+              detail: "Portrait",
+            },
+            {
               id: 6,
-              img: `${imgPhotoL6}`,
+              img: `${imgPhotoP6}`,
+              detail: "Portrait",
+            },
+            {
+              id: 7,
+              img: `${imgPhotoP7}`,
               detail: "Portrait",
             },
           ],
@@ -186,11 +227,14 @@ function SkillsPage() {
   const [dataImg, setDataImg] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [dataModal, setDataModal] = useState(false);
-
+  const [selectType, setSelectType] = useState();
   const handleClick = (d) => {
     setClick(true);
     setDataDetail(d);
-    setDataImg(d.detailImg);
+    let detailImgMap = d.detailImg.map((img, index) => {
+      return img;
+    });
+    setDataImg(detailImgMap);
   };
 
   const handleClickImg = (d) => {
@@ -200,6 +244,10 @@ function SkillsPage() {
 
   const handleClose = () => {
     setIsModal(false);
+  };
+
+  const handleTypeImg = (d) => {
+    setSelectType(d.id);
   };
   return (
     <div
@@ -225,8 +273,9 @@ function SkillsPage() {
                     onClick={() => {
                       handleClick(d);
                     }}
-                    className="custom-range"
+                    className="custom-range animated"
                     value={d.percent}
+                    id={`range-${d.id}`}
                   />
                 </span>{" "}
               </div>
@@ -237,7 +286,7 @@ function SkillsPage() {
           {click ? (
             <div className="m-4 mt-0 pt-0 position-absolute">
               <Card
-                className="p-4 border-0"
+                className="p-5 border-0"
                 style={{
                   backgroundColor: "rgba(225, 234, 249, 0.8)",
                 }}
@@ -251,20 +300,22 @@ function SkillsPage() {
                     className="overflow-auto"
                   >
                     {" "}
-                    {dataImg.map((d, i) => (
-                      <div className="d-flex">
-                        <ButtonGroup>
-                          <Button variant="">{d?.typeName}</Button>
-                        </ButtonGroup>
-                      </div>
-                    ))}
+                    <div className="d-flex">
+                      {dataImg.map((d, i) => (
+                        <Button
+                          variant="light"
+                          className="m-0 me-2 mt-0 mb-3"
+                          onClick={() => handleTypeImg(d)}
+                          key={i}
+                        >
+                          {d?.typeName}
+                        </Button>
+                      ))}
+                    </div>
                     <div className="d-flex gap-2">
                       {dataImg &&
                         dataImg.map((d, i) => (
                           <>
-                            {console.log("d", d)}
-                            {console.log("dataImg", dataImg)}
-
                             {d?.type.map((t, index) => (
                               <ButtonToolbar>
                                 <OverlayTrigger
@@ -275,14 +326,32 @@ function SkillsPage() {
                                     </Tooltip>
                                   }
                                 >
-                                  <Image
-                                    key={index}
-                                    src={t.img}
-                                    className="img-size"
-                                    onClick={() => {
-                                      handleClickImg(t);
-                                    }}
-                                  />
+                                  <>
+                                    {selectType === 1 ? (
+                                      <>
+                                        <Image
+                                          key={index}
+                                          src={t.img}
+                                          className="img-size"
+                                          onClick={() => {
+                                            handleClickImg(t);
+                                          }}
+                                        />
+                                      </>
+                                    ) : selectType === 2 ? (
+                                      <>
+                                        {console.log("t", t)}
+                                        <Image
+                                          key={index}
+                                          src={d.id === 2 ? t.img : null}
+                                          className="img-size"
+                                          onClick={() => {
+                                            handleClickImg(t);
+                                          }}
+                                        />
+                                      </>
+                                    ) : null}
+                                  </>
                                 </OverlayTrigger>
                               </ButtonToolbar>
                             ))}
