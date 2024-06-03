@@ -29,14 +29,14 @@ function MainPage() {
         <div className=" row">
           <div className="col-12 d-flex">
             <div className="col-6 ">
-              <span className="d-flex justify-content-center mt-5">
+              <span className="d-flex justify-content-center mt-4">
                 <Image
                   className="border-img animated-image shadow"
                   src={imgPersonal}
                   fluid
                   style={{
                     minWidth: "50px",
-                    maxWidth: "500px",
+                    maxWidth: "350px",
                     borderRadius: "20px",
                   }}
                 />
