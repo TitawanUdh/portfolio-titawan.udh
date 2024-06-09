@@ -30,12 +30,12 @@ function MainPage() {
             <div className="col-6 orders-custom-1">
               <span className="d-flex justify-content-center ">
                 <Image
-                  className="border-img animated-image shadow"
+                  className="border-img animated-image shadow img-personal"
                   src={imgPersonal}
                   fluid
                   style={{
                     minWidth: "100px",
-                    maxWidth: "450px",
+                    maxWidth: "350px",
                     borderRadius: "20px",
                   }}
                 />
