@@ -82,9 +82,14 @@
 } */
 /* main */
 
-@media (max-width: 2560px) and (min-height: 750px) {
+@media (min-width: 2560px) and (min-width: 950px) and (min-height: 580px) {
   .img-personal {
-    min-width: 500px;
+    /* min-width: 200px; */
+    min-width: 150px;
+    max-width: 400px;
+  }
+  .img-fluid {
+    min-width: 100px;
     max-width: 550px;
   }
 }
@@ -94,6 +99,10 @@
     margin: 0px 0px 0px 0px;
     min-width: 100px;
     max-width: 350px;
+  }
+  .img-fluid {
+    min-width: 100px !important;
+    max-width: 550px !important;
   }
   .text-port {
     display: flex;

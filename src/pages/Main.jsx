@@ -34,9 +34,7 @@ function MainPage() {
                   src={imgPersonal}
                   fluid
                   style={{
-                    minWidth: "100px",
-                    maxWidth: "350px",
-                    borderRadius: "20px",
+                    borderRadius: "20px"
                   }}
                 />
               </span>
