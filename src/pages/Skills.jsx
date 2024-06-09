@@ -262,7 +262,7 @@ function SkillsPage() {
     >
       <div className="text-header-title end-animation">SKILLs</div>
       <div className="col-12 d-flex">
-        <div className="col-6">
+        <div className="col-6 ">
           <div className="p-5 pt-4">
           {skills.map((d, i) => (
             <>
@@ -283,7 +283,7 @@ function SkillsPage() {
             </>
           ))}{" "}
         </div></div>
-        <div className="col-6">
+        <div className="col-6 ">
           {click ? (
             <div className="m-4 mt-0 pt-0 position-absolute">
               <Card

@@ -11,7 +11,6 @@ function MainPage() {
     name: "Titawan",
     surname: "Udhayananandh",
     position: "frontend developer",
-    // link_to:
   };
   const navigate = useNavigate();
   return (
@@ -25,26 +24,26 @@ function MainPage() {
         position: "relative",
       }}
     >
-      <div className="p-3">
+      <div className="p-5">
         <div className=" row">
           <div className="col-12 d-flex">
-            <div className="col-6 ">
-              <span className="d-flex justify-content-center mt-4">
+            <div className="col-6 orders-custom-1">
+              <span className="d-flex justify-content-center ">
                 <Image
                   className="border-img animated-image shadow"
                   src={imgPersonal}
                   fluid
                   style={{
-                    minWidth: "50px",
-                    maxWidth: "350px",
+                    minWidth: "100px",
+                    maxWidth: "450px",
                     borderRadius: "20px",
                   }}
                 />
               </span>
             </div>
-            <div className="col-6">
-              <div className="align-middle mt-5">
-                <span className="text-header-grey position-absolute start-animation ">
+            <div className="col-6 orders-custom-2 ">
+              <div className="align-middle text-custom-end text-port">
+                <span className="text-header-grey position-absolute start-animation">
                   {data.head_title}
                 </span>
                 <span className="text-header position-absolute start-animation">
@@ -52,29 +51,19 @@ function MainPage() {
                 </span>
               </div>
 
-              <div
-                className="text-sub-header-name start-animation"
-                style={{
-                  marginTop: "300px",
-                  marginLeft: "300px",
-                }}
-              >
+              <div className="text-sub-header-name start-animation">
                 {data.name}
               </div>
-              <div
-                className="text-sub-header-surname mt-0 start-animation"
-                style={{
-                  marginLeft: "380px",
-                }}
-              >
+              <div className="text-sub-header-surname mt-0 start-animation">
                 {data.surname}
               </div>
               <hr />
               <div className="text-position bottom-animation">
                 {data.position}
               </div>
-              <div className="d-flex justify-content-end m-4 mt-4">
+              <div className="d-flex justify-content-end  mt-4">
                 <Button
+                  className="button-next"
                   style={{
                     borderRadius: "20px",
                     minWidth: "100px",
@@ -86,7 +75,7 @@ function MainPage() {
                     navigate("/skills");
                   }}
                 >
-                  Next <GrLinkNext />
+                  <span className="text-button">Next</span> <GrLinkNext />
                 </Button>
               </div>
             </div>

@@ -60,7 +60,7 @@ function ContactPage() {
   const [imgModel, setDataModel] = useState({});
 
   const handleModelGrade = (d) => {
-    setOnSchool(d.id)
+    setOnSchool(d.id);
     setOnModel(true);
     console.log("d", d);
     let dataImg = d?.img_grade.map((img) => {
@@ -144,7 +144,7 @@ function ContactPage() {
                                       className="border-0 p-4 pt-3"
                                       style={{
                                         backgroundColor: "#FBEEE6",
-                                        width: "500px",
+                                        maxWidth: "500px",
                                         height: "180px",
                                       }}
                                     >
@@ -161,7 +161,7 @@ function ContactPage() {
                                                 style={{
                                                   width: "200px",
                                                   height: "150px",
-                                                  borderRadius: '10px'
+                                                  borderRadius: "10px",
                                                 }}
                                                 allowfullscreen={true}
                                               />
@@ -177,11 +177,15 @@ function ContactPage() {
                                         data.education.map((d, i) => (
                                           <>
                                             <div
-                                              className={`d-flex justify-content-start gap-2 align-middle ${d.id === onSchool ? 'on-select' : 'p-2'}`}
+                                              className={`d-flex justify-content-start gap-2 align-middle ${
+                                                d.id === onSchool
+                                                  ? "on-select"
+                                                  : "p-2"
+                                              }`}
                                               key={i}
                                               onClick={() =>
-                                                  handleModelGrade(d)
-                                                }
+                                                handleModelGrade(d)
+                                              }
                                             >
                                               <Image
                                                 src={d.img}
@@ -190,9 +194,10 @@ function ContactPage() {
                                                   width: "40px",
                                                   height: "40px",
                                                 }}
-                                                
                                               />
-                                              <div className={`d-flex m-1 mt-2 mb-0 me-0`}>
+                                              <div
+                                                className={`d-flex m-1 mt-2 mb-0 me-0`}
+                                              >
                                                 <p>
                                                   {" "}
                                                   {d.school}{" "}
@@ -222,25 +227,38 @@ function ContactPage() {
       </div>
       {onModel && (
         <Modal
-        width={1000}
-        open={onModel}
-        onCancel={handleClose}
-        cancelButtonProps={{ hidden: true }}
-        okButtonProps={{ hidden: true }}
-      >
-        <div className="p-2 d-flex justify-content-center">
-          {imgModel.map((d, i) => (
-            <div className="row" key={i}>
-              <span className="gap-2 p-3">
-                <div style={{ width: '100%',  display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Image src={d} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
-                </div>
-              </span>
-            </div>
-          ))}
-        </div>
-      </Modal>
-      
+          width={1000}
+          open={onModel}
+          onCancel={handleClose}
+          cancelButtonProps={{ hidden: true }}
+          okButtonProps={{ hidden: true }}
+        >
+          <div className="p-2 d-flex justify-content-center">
+            {imgModel.map((d, i) => (
+              <div className="row" key={i}>
+                <span className="gap-2 p-3">
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Image
+                      src={d}
+                      style={{
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </span>
+              </div>
+            ))}
+          </div>
+        </Modal>
       )}
     </>
   );
