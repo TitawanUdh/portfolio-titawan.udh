@@ -28,6 +28,9 @@ function MainPage() {
       className="background-container"
       style={{
         backgroundImage: `url(${imgBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
       }}
     >
       <div className="p-5">

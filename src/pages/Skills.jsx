@@ -37,6 +37,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import { Modal } from "antd";
+import Skillimage from "../components/Skillimage";
 
 function SkillsPage() {
   const skills = [
@@ -46,7 +47,7 @@ function SkillsPage() {
       percent: 95,
 
       detail:
-        "When I was study in university. I was study about programming class, that's class inspire to programming passion for me and that I try to find the way to learning by myself such as take online class, ask my friend about this skill and etc.",
+        "When I was student in university. I was study about programming class, that's class inspire to programming passion for me and that I try to find the way to learning by myself such as take online class, ask my friend about this skill and etc.",
       detailImg: [],
     },
     {
@@ -93,7 +94,7 @@ function SkillsPage() {
       skill: "UX/ UI",
       percent: 85,
       detail:
-        "When I was study in university. I was study about designing webpage, also I was have designing skill and when I work at SKYICT I often design the webpage by myself because UX/UI position I my old company have just one person but we have a lot of project, so it's make me practice my UX/UI skill",
+        "When I was study in university. I was study about designing webpage, also I was have designing skill and when I work at SKYICT I often design the webpage by myself because UX/UI position in my old company have just one person but we have a lot of project, so it's make me practice my UX/UI skill",
       detailImg: [],
     },
     {
@@ -186,36 +187,36 @@ function SkillsPage() {
               img: `${imgPhotoP1}`,
               detail: "Portrait",
             },
-            // {
-            //   id: 2,
-            //   img: `${imgPhotoP2}`,
-            //   detail: "Portrait",
-            // },
-            // {
-            //   id: 3,
-            //   img: `${imgPhotoP3}`,
-            //   detail: "Portrait",
-            // },
-            // {
-            //   id: 4,
-            //   img: `${imgPhotoP4}`,
-            //   detail: "Portrait",
-            // },
-            // {
-            //   id: 5,
-            //   img: `${imgPhotoP5}`,
-            //   detail: "Portrait",
-            // },
-            // {
-            //   id: 6,
-            //   img: `${imgPhotoP6}`,
-            //   detail: "Portrait",
-            // },
-            // {
-            //   id: 7,
-            //   img: `${imgPhotoP7}`,
-            //   detail: "Portrait",
-            // },
+            {
+              id: 2,
+              img: `${imgPhotoP2}`,
+              detail: "Portrait",
+            },
+            {
+              id: 3,
+              img: `${imgPhotoP3}`,
+              detail: "Portrait",
+            },
+            {
+              id: 4,
+              img: `${imgPhotoP4}`,
+              detail: "Portrait",
+            },
+            {
+              id: 5,
+              img: `${imgPhotoP5}`,
+              detail: "Portrait",
+            },
+            {
+              id: 6,
+              img: `${imgPhotoP6}`,
+              detail: "Portrait",
+            },
+            {
+              id: 7,
+              img: `${imgPhotoP7}`,
+              detail: "Portrait",
+            },
           ],
         },
       ],
@@ -225,9 +226,10 @@ function SkillsPage() {
   const [click, setClick] = useState(false);
   const [dataDetail, setDataDetail] = useState([]);
   const [dataImg, setDataImg] = useState([]);
+  const [dataImgs, setDataImgs] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [dataModal, setDataModal] = useState(false);
-  const [selectType, setSelectType] = useState();
+
   const handleClick = (d) => {
     setClick(true);
     setDataDetail(d);
@@ -247,43 +249,43 @@ function SkillsPage() {
   };
 
   const handleTypeImg = (d) => {
-    setSelectType(d.id);
-    console.log('selectType', selectType)
+    setDataImgs(d.type);
   };
   return (
     <div
+    className="background-container"
+
       style={{
         backgroundImage: `url(${imgBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "100%",
         height: "100vh",
-        position: "relative",
       }}
     >
       <div className="text-header-title end-animation">SKILLs</div>
       <div className="col-12 d-flex">
         <div className="col-6 ">
           <div className="p-5 pt-4">
-          {skills.map((d, i) => (
-            <>
-              {" "}
-              <div className="text-title">{d.skill}</div>
-              <div className="m-5 mt-2 mb-0">
-                <span className="pointer-events">
-                  <Form.Range
-                    onClick={() => {
-                      handleClick(d);
-                    }}
-                    className="custom-range animated"
-                    value={d.percent}
-                    id={`range-${d.id}`}
-                  />
-                </span>{" "}
-              </div>
-            </>
-          ))}{" "}
-        </div></div>
+            {skills.map((d, i) => (
+              <>
+                {" "}
+                <div className="text-title">{d.skill}</div>
+                <div className="m-5 mt-2 mb-0">
+                  <span className="pointer-events">
+                    <Form.Range
+                      onClick={() => {
+                        handleClick(d);
+                      }}
+                      className="custom-range animated"
+                      value={d.percent}
+                      id={`range-${d.id}`}
+                    />
+                  </span>{" "}
+                </div>
+              </>
+            ))}{" "}
+          </div>
+        </div>
         <div className="col-6 ">
           {click ? (
             <div className="m-4 mt-0 pt-0 position-absolute">
@@ -298,7 +300,7 @@ function SkillsPage() {
                 {dataDetail?.id &&
                 (dataDetail?.id === 2 || dataDetail?.id === 5) ? (
                   <Card.Body
-                    style={{ minWidth: "600px", maxWidth: '800px' }}
+                    style={{ minWidth: "600px", maxWidth: "800px" }}
                     className="overflow-auto"
                   >
                     {" "}
@@ -310,53 +312,34 @@ function SkillsPage() {
                           onClick={() => handleTypeImg(d)}
                           key={i}
                         >
+                          {console.log('d1', d)}
                           {d?.typeName}
                         </Button>
                       ))}
                     </div>
                     <div className="d-flex gap-2">
-                      {dataImg &&
-                        dataImg.map((d, i) => (
+                      {dataImgs &&
+                        dataImgs.map((d, i) => (
                           <>
-                            {d?.type.map((t, index) => (
-                              <ButtonToolbar>
-                                <OverlayTrigger
-                                  placement="top"
-                                  overlay={
-                                    <Tooltip id="tooltip-detail">
-                                      {t.detail}
-                                    </Tooltip>
-                                  }
-                                >
-                                  <>
-                                    {selectType === 1 ? (
-                                      <>
-                                        <Image
-                                          key={index}
-                                          src={t.img}
-                                          className="img-size"
-                                          onClick={() => {
-                                            handleClickImg(t);
-                                          }}
-                                        />
-                                      </>
-                                    ) : selectType === 2 ? (
-                                      <>
-                                        {console.log("t", t)}
-                                        <Image
-                                          key={index}
-                                          src={d.id === 2 ? t.img : null}
-                                          className="img-size"
-                                          onClick={() => {
-                                            handleClickImg(t);
-                                          }}
-                                        />
-                                      </>
-                                    ) : null}
-                                  </>
-                                </OverlayTrigger>
-                              </ButtonToolbar>
-                            ))}
+                            <ButtonToolbar>
+                              <OverlayTrigger
+                                placement="top"
+                                overlay={
+                                  <Tooltip id="tooltip-detail">
+                                    {d.detail}dd
+                                  </Tooltip>
+                                }
+                              >
+                                <>
+                                  <Image
+                                    className="img-size"
+                                    key={i}
+                                    src={d.img}
+                                    onClick={() => handleClickImg(d.img)}
+                                  />
+                                </>
+                              </OverlayTrigger>
+                            </ButtonToolbar>
                           </>
                         ))}{" "}
                     </div>
