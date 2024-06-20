@@ -186,36 +186,36 @@ function SkillsPage() {
               img: `${imgPhotoP1}`,
               detail: "Portrait",
             },
-            {
-              id: 2,
-              img: `${imgPhotoP2}`,
-              detail: "Portrait",
-            },
-            {
-              id: 3,
-              img: `${imgPhotoP3}`,
-              detail: "Portrait",
-            },
-            {
-              id: 4,
-              img: `${imgPhotoP4}`,
-              detail: "Portrait",
-            },
-            {
-              id: 5,
-              img: `${imgPhotoP5}`,
-              detail: "Portrait",
-            },
-            {
-              id: 6,
-              img: `${imgPhotoP6}`,
-              detail: "Portrait",
-            },
-            {
-              id: 7,
-              img: `${imgPhotoP7}`,
-              detail: "Portrait",
-            },
+            // {
+            //   id: 2,
+            //   img: `${imgPhotoP2}`,
+            //   detail: "Portrait",
+            // },
+            // {
+            //   id: 3,
+            //   img: `${imgPhotoP3}`,
+            //   detail: "Portrait",
+            // },
+            // {
+            //   id: 4,
+            //   img: `${imgPhotoP4}`,
+            //   detail: "Portrait",
+            // },
+            // {
+            //   id: 5,
+            //   img: `${imgPhotoP5}`,
+            //   detail: "Portrait",
+            // },
+            // {
+            //   id: 6,
+            //   img: `${imgPhotoP6}`,
+            //   detail: "Portrait",
+            // },
+            // {
+            //   id: 7,
+            //   img: `${imgPhotoP7}`,
+            //   detail: "Portrait",
+            // },
           ],
         },
       ],
@@ -248,6 +248,7 @@ function SkillsPage() {
 
   const handleTypeImg = (d) => {
     setSelectType(d.id);
+    console.log('selectType', selectType)
   };
   return (
     <div

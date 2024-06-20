@@ -14,32 +14,38 @@ function MainPage() {
   };
   const navigate = useNavigate();
   return (
+    // <div
+    //   style={{
+    //     backgroundImage: `url(${imgBg})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //     width: "100%",
+    //     height: "100vh",
+    //     position: "relative",
+    //   }}
+    // >
     <div
+      className="background-container"
       style={{
         backgroundImage: `url(${imgBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "100vh",
-        position: "relative",
       }}
     >
       <div className="p-5">
-        <div className=" row">
-          <div className="col-12 d-flex">
-            <div className="col-6 orders-custom-1">
+        <div className=" row ">
+          <div className="col-12 d-flex display-phone">
+            <div className="col-md-6 col-xl-6 col-12 orders-custom-2">
               <span className="d-flex justify-content-center ">
                 <Image
                   className="border-img animated-image shadow img-personal"
                   src={imgPersonal}
                   fluid
                   style={{
-                    borderRadius: "20px"
+                    borderRadius: "20px",
                   }}
                 />
               </span>
             </div>
-            <div className="col-6 orders-custom-2 ">
+            <div className="col-md-6 col-xl-6 col-12 orders-custom-1">
               <div className="align-middle text-custom-end text-port">
                 <span className="text-header-grey position-absolute start-animation">
                   {data.head_title}

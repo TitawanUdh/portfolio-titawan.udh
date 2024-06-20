@@ -109,7 +109,7 @@
     justify-content: end;
   }
   .text-header {
-    font-size: 90px;
+    font-size: 82px;
     color: #ff8e26;
     text-transform: uppercase;
     margin: 0px 0px 0px 0px;
@@ -117,7 +117,7 @@
     justify-content: end;
   }
   .text-header-grey {
-    font-size: 90px;
+    font-size: 82px;
     color: #646464;
     text-transform: uppercase;
     margin: 4px -3px 0px 0px;
@@ -222,6 +222,86 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 725px) and (min-width: 200px) {
+  .display-phone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orders-custom-1 {
+    order: 1 !important;
+  }
+
+  .orders-custom-2 {
+    order: 2 !important;
+  }
+
+  .img-personal {
+    margin: 50px 0px 0px 0px;
+  }
+
+  .text-port {
+    display: flex;
+    justify-content: end;
+  }
+
+  .text-header {
+    font-size: 60px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    margin: 0px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .text-header-grey {
+    font-size: 60px;
+    color: #646464;
+    text-transform: uppercase;
+    margin: 3px -3px 0px 0px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .text-sub-header-name {
+    font-size: 30px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    margin: 200px 0px 0px 0px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .text-sub-header-surname {
+    font-size: 20px;
+    color: #453221;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .text-position {
+    font-size: 14px;
+    color: #646464;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .button-next {
+    margin: 0px;
+  }
+
+  .text-button {
+    font-size: 14px;
+  }
+}
+
+
 
 /* Skill Page */
 .text-header-title {
