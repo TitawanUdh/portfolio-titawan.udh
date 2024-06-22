@@ -264,7 +264,7 @@ function SkillsPage() {
     >
       <div className="text-header-title end-animation">SKILLs</div>
       <div className="col-12 d-flex">
-        <div className="col-6 ">
+        <div className="col-6 orders-custom-1">
           <div className="p-5 pt-4">
             {skills.map((d, i) => (
               <>
@@ -286,9 +286,9 @@ function SkillsPage() {
             ))}{" "}
           </div>
         </div>
-        <div className="col-6 ">
+        <div className="col-6 orders-custom-2">
           {click ? (
-            <div className="m-4 mt-0 pt-0 position-absolute">
+            <div className="m-4 mt-0 pt-0 cover-card">
               <Card
                 className="p-5 border-0"
                 style={{
@@ -299,9 +299,9 @@ function SkillsPage() {
                 <div>{dataDetail?.detail}</div>
                 {dataDetail?.id &&
                 (dataDetail?.id === 2 || dataDetail?.id === 5) ? (
-                  <Card.Body
-                    style={{ minWidth: "600px", maxWidth: "800px" }}
-                    className="overflow-auto"
+                  <Card.Body 
+                    // style={{ minWidth: "600px", maxWidth: "800px" }}
+                    className="overflow-auto card-img"
                   >
                     {" "}
                     <div className="d-flex">
@@ -312,7 +312,7 @@ function SkillsPage() {
                           onClick={() => handleTypeImg(d)}
                           key={i}
                         >
-                          {console.log('d1', d)}
+                        
                           {d?.typeName}
                         </Button>
                       ))}
@@ -326,7 +326,7 @@ function SkillsPage() {
                                 placement="top"
                                 overlay={
                                   <Tooltip id="tooltip-detail">
-                                    {d.detail}dd
+                                    {d.detail}
                                   </Tooltip>
                                 }
                               >

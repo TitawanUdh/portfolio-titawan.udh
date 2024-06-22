@@ -76,10 +76,6 @@
   padding: 2px;
 }
 
-/* .text-sub-header-name {
-  display: flex;
-  justify-content: end;
-} */
 /* main */
 
 @media (min-width: 2560px) and (min-width: 950px) and (min-height: 580px) {
@@ -102,7 +98,7 @@
   }
   .img-fluid {
     min-width: 100px !important;
-    max-width: 550px !important;
+    max-width: 400px !important;
   }
   .text-port {
     display: flex;
@@ -304,7 +300,16 @@
 /* Skill Page */
 @media (min-width: 2560px) and (min-width: 950px) and (min-height: 580px){
 }
-@media (max-width: 1412px) and (min-width: 1024px) {
+@media (max-width: 1412px) and (min-width: 1296px) {
+  .card-img{
+    min-width: 20;
+    max-width: 550px;
+  }
+  .cover-card{
+    min-width: 20px;
+    max-width: 600px;
+    position: absolute;
+  }
   .text-header-title {
     font-size: 70px;
     color: #ff8e26;
@@ -362,9 +367,218 @@
   }
   
 }
-@media (max-width: 951px) and (min-width: 726px) {
+@media (max-width: 1297px) and (min-width: 1165px) {
+  .card-img{
+    min-width: 20;
+    max-width: 500px;
+  }
+  .cover-card{
+    min-width: 20px;
+    max-width: 550px;
+    position: absolute;
+  }
+  .text-header-title {
+    font-size: 70px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    margin-left: 50px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: #ff8e26;
+    animation: slideInFromLeft 0.5s ease-in;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: rgb(22, 22, 22); /* Change to your desired track color */
+  }
+  .pointer-events {
+    pointer-events: auto !important;
+  }
+  .img-size {
+    object-fit: cover;
+    max-width: 300px;
+  }
+  /* experience page */
+  .card-info {
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 100px;
+    border: none;
+  }
+  
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+  
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+  
+  div.card-opacity {
+    color: #000000;
+  }
+  
+  .sub-text-info {
+    color: black;
+  }
+  
+}
+@media (max-width: 1166px) and (min-width: 1000px) {
+  
+  .card-img{
+    min-width: 20;
+    max-width: 400px;
+  }
+  .cover-card{
+    min-width: 20px;
+    max-width: 450px;
+    position: absolute;
+  }
+  .text-header-title {
+    font-size: 70px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    margin-left: 50px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: #ff8e26;
+    animation: slideInFromLeft 0.5s ease-in;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: rgb(22, 22, 22); /* Change to your desired track color */
+  }
+  .pointer-events {
+    pointer-events: auto !important;
+  }
+  .img-size {
+    object-fit: cover;
+    max-width: 300px;
+  }
+  /* experience page */
+  .card-info {
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 100px;
+    border: none;
+  }
+  
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+  
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+  
+  div.card-opacity {
+    color: #000000;
+  }
+  
+  .sub-text-info {
+    color: black;
+  }
+  
 }
 @media (max-width: 725px) and (min-width: 200px) {
+  .display-phone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orders-custom-1 {
+    order: 1 !important;
+  }
+
+  .orders-custom-2 {
+    order: 2 !important;
+  }
+  .card-img{
+    min-width: 20;
+    max-width: 400px;
+  }
+  .cover-card{
+    min-width: 20px;
+    max-width: 450px;
+    position: absolute;
+  }
+  .text-header-title {
+    font-size: 70px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 30px;
+    margin-left: 50px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: #ff8e26;
+    animation: slideInFromLeft 0.5s ease-in;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: rgb(22, 22, 22); /* Change to your desired track color */
+  }
+  .pointer-events {
+    pointer-events: auto !important;
+  }
+  .img-size {
+    object-fit: cover;
+    max-width: 300px;
+  }
+  /* experience page */
+  .card-info {
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 100px;
+    border: none;
+  }
+  
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+  
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+  
+  div.card-opacity {
+    color: #000000;
+  }
+  
+  .sub-text-info {
+    color: black;
+  }
 }
 
 
