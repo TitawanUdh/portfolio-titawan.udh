@@ -19,21 +19,28 @@ function ExperiencePage() {
       title: 'Ceramic Project',
       subTitle: 'When I was 3rd year at university',
       img: `${imgCeremic}`,
-      detail: `This website is about Ceramic Studio. It's online Shop that's can show all of Ceramic product and told a detail of product. My responsibilities are coding frontend development. At that's time I didn't know about Javascript I use just HTML and CSS for this project.`
+      detail: `This website is about Ceramic Studio. It's an online Shop that can show all of the Ceramic products and tell a detail of the product. My responsibilities are coding frontend development. At that time I didn't know about JavaScript I used just HTML and CSS for this project.`
     },
     {
       id: 2,
       title: 'Internship Project',
-      subTitle: 'When I was internship at Praxic company',
+      subTitle: 'Internship program at Praxic company',
       img: `${imgPraxicel}`,
-      detail: `My responsibilities are adjust design of company's website by choosing in 3 theme colors and then fixng code in Visual Stidio program within clinet of Angular and language are HTML, SCSS, JavaScript, and TypeScript. Without that I have to  create a new 1 page about display graph and favorite folders.`
+      detail: `My first duty was the meeting minutes report, and then I had a chance to design a little part such as the loading tab. My final internship project is to design and create an Organization website. It makes me know the working process from design, mock-up, and creating the website.`
     },
     {
       id: 3,
       title: 'WAN THAI INDUSTRY COMPANY',
-      subTitle: 'My first job',
+      subTitle: 'Project Management',
       img: `${imgPraxicel}`,
-      detail: `I work at YUMYUM company.`
+      detail: `This is my first job in Thailand. My position is Project Management. The project that I handle is the WMS (Warehouse Management Systems) project. I have a chance to design a Wan Thai app for employees to increase comfort in working.`
+    },
+    {
+      id: 4,
+      title: 'SKYICT COMPANY',
+      subTitle: 'Frontend Developer',
+      img: `${imgPraxicel}`,
+      detail: `I worked at SKYICT as a Developer Frontend. My duty is to create or develop an organization website and we use HTML, CSS, and JavaScript language in the ReactJS library.`
     },
 
   ]
@@ -49,7 +56,7 @@ function ExperiencePage() {
         position: "relative",
       }}
     >
-      <div className="text-header-title end-animation">Experiences</div>
+      <div className="text-header-title-2 end-animation">Experiences</div>
       <div className="p-3">
         <Card className="border-0"
         style={{

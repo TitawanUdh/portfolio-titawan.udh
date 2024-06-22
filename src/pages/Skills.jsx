@@ -253,8 +253,7 @@ function SkillsPage() {
   };
   return (
     <div
-    className="background-container"
-
+      className="background-container"
       style={{
         backgroundImage: `url(${imgBg})`,
         backgroundSize: "cover",
@@ -263,8 +262,8 @@ function SkillsPage() {
       }}
     >
       <div className="text-header-title end-animation">SKILLs</div>
-      <div className="col-12 d-flex">
-        <div className="col-6 orders-custom-1">
+      <div className="col-12 d-flex display-phone">
+        <div className="col-md-6 col-xl-6 orders-custom-1 col-12">
           <div className="p-5 pt-4">
             {skills.map((d, i) => (
               <>
@@ -286,7 +285,7 @@ function SkillsPage() {
             ))}{" "}
           </div>
         </div>
-        <div className="col-6 orders-custom-2">
+        <div className="col-md-6 col-xl-6 col-12 orders-custom-2">
           {click ? (
             <div className="m-4 mt-0 pt-0 cover-card">
               <Card
@@ -299,7 +298,7 @@ function SkillsPage() {
                 <div>{dataDetail?.detail}</div>
                 {dataDetail?.id &&
                 (dataDetail?.id === 2 || dataDetail?.id === 5) ? (
-                  <Card.Body 
+                  <Card.Body
                     // style={{ minWidth: "600px", maxWidth: "800px" }}
                     className="overflow-auto card-img"
                   >
@@ -312,7 +311,6 @@ function SkillsPage() {
                           onClick={() => handleTypeImg(d)}
                           key={i}
                         >
-                        
                           {d?.typeName}
                         </Button>
                       ))}

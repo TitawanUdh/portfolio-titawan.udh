@@ -31,6 +31,7 @@ function MainPage() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
+        // width: "100%"
       }}
     >
       <div className="p-5">
