@@ -261,7 +261,7 @@ function SkillsPage() {
         height: "100vh",
       }}
     >
-      <div className="text-header-title end-animation">SKILLs</div>
+      <div className="text-header-title end-animation" style={{fontSize: '50px'}}>SKILLs</div>
       <div className="col-12 d-flex display-phone">
         <div className="col-md-6 col-xl-6 orders-custom-1 col-12">
           <div className="p-5 pt-4">

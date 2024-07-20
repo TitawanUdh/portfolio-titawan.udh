@@ -49,7 +49,7 @@ function ContactPage() {
       },
     ],
     age: "25 years old",
-    gender: "Women",
+    gender: "Female",
     e_mail: "titawan.udh@gmail.com",
     phone_no: "088-908-8881",
     birthday: "06 June 1999",
@@ -83,54 +83,52 @@ function ContactPage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
-          height: "100vh",
+          height: "100%",
           position: "relative",
         }}
       >
         <div className="text-header-title end-animation">Contact</div>
 
-        <div className="p-3">
+        <div className="card-contact mx-auto">
           <Card
-            className="p-4 border-0"
+            className="p-4 border-0 "
             style={{
               backgroundColor: "rgba(225, 234, 249, 0.8)",
             }}
           >
             <Row className="">
-              <Col xl={12}>
-                <div className="p-3">
+              <Col xl={12} sm={12} className="gap-sm-2">
+                <div className="p-3 ">
                   {data && (
                     <div className="d-flex justify-content-center">
-                      <div className="col-6">
-                        <div className="d-flex justify-content-center">
+                      <div className="col-6 col-sm-12">
+                        <div className="d-flex justify-content-center me-sm-2">
                           <Image
                             src={data.img}
-                            style={{ width: "400px", borderRadius: "20px" }}
+                            className="img-contact"
+                            // style={{
+                            //   maxWidth: "400px",
+                            //   minWidth: "150px",
+                            //   borderRadius: "20px",
+                            // }}
                           />
                           {console.log("data.img", data.img)}
                         </div>
                       </div>
-                      <div className="col-6">
-                        <div className="d-flex">
-                          <Card.Body
-                            style={{
-                              backgroundColor: "white",
-                              border: "none",
-                              borderRadius: "20px",
-                            }}
-                            className="p-4"
-                          >
+                      <div className="col-6 col-sm-12">
+                        <div className="d-flex justify-content-center ">
+                          <Card.Body className="p-4 card-white-info ">
                             <Row>
-                              <Col xl={12}>
+                              <Col xl={12} md={12}>
                                 <div className="d-flex">
-                                  <div className="col-5 ">
+                                  <div className="col-5 col-md-6 col-sm-12">
                                     <div className="m-3 mt-2 mb-0 me-0">
                                       <h2 className="name">{data.name_en}</h2>
                                       <h3 className="surname">
                                         {data.surname_en}
                                       </h3>
                                     </div>
-                                    <div className="m-4 mb-0">
+                                    <div className="m-4 mb-0 text-detail">
                                       <p>Age: {data.age}</p>
                                       <p>Date of Birth: {data.birthday}</p>
                                       <p>Gender: {data.gender}</p>
@@ -139,75 +137,56 @@ function ContactPage() {
                                     </div>
                                   </div>
 
-                                  <div className="col-7">
-                                    <Card
-                                      className="border-0 p-4 pt-3"
-                                      style={{
-                                        backgroundColor: "#FBEEE6",
-                                        maxWidth: "500px",
-                                        height: "180px",
-                                      }}
-                                    >
-                                      <Row className="d-flex">
-                                        <div className="col-12 d-flex">
-                                          <div className="col-7 p-2">
-                                            <p>{data.address}</p>
-                                          </div>
-                                          <div className="col-5">
+                                  <div className="col-7 col-md-6 col-sm-12">
+                                    <Card className="border-0 p-4 pb-md-0 pt-3 card-info-contact">
+                                      <Row className="">
+                                        <div className="">
+                                          <div className="">
                                             <span className="d-flex justify-content-center mb-3">
-                                              {" "}
                                               <iframe
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.8210928908406!2d100.6073212!3d13.7896562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29defc14fa54f%3A0x4189d0b58b70d4d0!2z4LiL4Lit4LiiIOC4peC4suC4lOC4nuC4o-C5ieC4suC4pyA2OSDguYHguILguKfguIfguKrguLDguJ7guLLguJnguKrguK3guIcg4LmA4LiC4LiV4Lin4Lix4LiH4LiX4Lit4LiH4Lir4Lil4Liy4LiHIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDMxMA!5e0!3m2!1sth!2sth!4v1717310247301!5m2!1sth!2sth"
-                                                style={{
-                                                  width: "200px",
-                                                  height: "150px",
-                                                  borderRadius: "10px",
-                                                }}
-                                                allowfullscreen={true}
+                                                className="iframe-contact"
+                                                allowFullScreen={true}
                                               />
                                             </span>
+                                          </div>
+                                          <div className="w-100 address-info text-detail">
+                                            <p>{data.address}</p>
                                           </div>
                                         </div>
                                       </Row>
                                     </Card>
 
-                                    <div className=" m-1 mt-4">
-                                      <p className="">Education:</p>
+                                    <div className="text-detail mt-0 mt-sm-3 pt-0">
+                                      <p>Education:</p>
                                       {data.education &&
                                         data.education.map((d, i) => (
-                                          <>
-                                            <div
-                                              className={`d-flex justify-content-start gap-2 align-middle ${
-                                                d.id === onSchool
-                                                  ? "on-select"
-                                                  : "p-2"
-                                              }`}
-                                              key={i}
-                                              onClick={() =>
-                                                handleModelGrade(d)
-                                              }
-                                            >
-                                              <Image
-                                                src={d.img}
-                                                className="m-1 mb-0 me-2"
-                                                style={{
-                                                  width: "40px",
-                                                  height: "40px",
-                                                }}
-                                              />
-                                              <div
-                                                className={`d-flex m-1 mt-2 mb-0 me-0`}
-                                              >
-                                                <p>
-                                                  {" "}
-                                                  {d.school}{" "}
-                                                  <span className="bg-grade">
-                                                    {d.grade}
-                                                  </span>
-                                                </p>
-                                              </div>
+                                          <div
+                                            className={`d-flex justify-content-start gap-2 align-middle ${
+                                              d.id === onSchool
+                                                ? "on-select"
+                                                : "p-2"
+                                            }`}
+                                            key={i}
+                                            onClick={() => handleModelGrade(d)}
+                                          >
+                                            <Image
+                                              src={d.img}
+                                              className="m-1 mb-0 me-2"
+                                              style={{
+                                                width: "40px",
+                                                height: "40px",
+                                              }}
+                                            />
+                                            <div className="d-flex m-1 mt-2 mb-0 me-0">
+                                              <p>
+                                                {d.school}{" "}
+                                                <span className="bg-grade">
+                                                  {d.grade}
+                                                </span>
+                                              </p>
                                             </div>
-                                          </>
+                                          </div>
                                         ))}
                                     </div>
                                   </div>

@@ -73,16 +73,14 @@ function ExperiencePage() {
               >
                 <Col xl={12}>
                   <div className="d-flex row align-items-center">
-                    <Col className="col-6">
+                    <Col className="col-xl-6 ">
                       <div className="p-3">
-                        <Image src={d.img} style={{ width: "700px" }} />
+                        <Image src={d.img} className="img-experience"  />
                       </div>
                     </Col>
-                    <Col className="col-6 d-flex justify-content-center">
-                      <div className="align-middle ">
-                        <div style={{
-                          marginLeft: '100px'
-                        }}>
+                    <Col className="col-xl-6 d-flex justify-content-center">
+                      <div className="align-middle">
+                        <div className="text-title-ex">
                         <h4>{d.title}</h4>
                         <span className="text-secondary">{d.subTitle}</span></div>
                         <Card

@@ -300,44 +300,37 @@
 /* Skill Page */
 
 @media (max-width: 1412px) and (min-width: 1296px) {
-  .card-img{
+  .card-img {
     min-width: 20;
     max-width: 550px;
   }
-  .cover-card{
+  .cover-card {
     min-width: 20px;
     max-width: 600px;
     position: absolute;
   }
- 
-  
 }
 @media (max-width: 1297px) and (min-width: 1165px) {
-  .card-img{
+  .card-img {
     min-width: 20;
     max-width: 500px;
   }
-  .cover-card{
+  .cover-card {
     min-width: 20px;
     max-width: 550px;
     position: absolute;
   }
- 
-  
 }
 @media (max-width: 1166px) and (min-width: 1000px) {
-  
-  .card-img{
+  .card-img {
     min-width: 20;
     max-width: 400px;
   }
-  .cover-card{
+  .cover-card {
     min-width: 20px;
     max-width: 450px;
     position: absolute;
   }
- 
-  
 }
 @media (max-width: 725px) and (min-width: 200px) {
   .display-phone {
@@ -352,48 +345,56 @@
   .orders-custom-2 {
     order: 2 !important;
   }
-  .card-img{
+  .card-img {
     min-width: 20;
     max-width: 350px;
+    position: absolute;
   }
-  .cover-card{
+  .cover-card {
     min-width: 20px;
     max-width: 370px;
     position: absolute;
   }
- 
 }
 
- .text-header-title {
-    font-size: 70px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 30px;
-    margin-left: 50px;
-  }
-  
-  input[type="range"]::-webkit-slider-thumb {
-    background-color: #ff8e26;
-    animation: slideInFromLeft 0.5s ease-in;
-  }
-  
-  input[type="range"]::-webkit-slider-runnable-track {
-    background-color: rgb(22, 22, 22); /* Change to your desired track color */
-  }
-  .pointer-events {
-    pointer-events: auto !important;
-  }
-  .img-size {
-    object-fit: cover;
-    max-width: 300px;
-  }
+.text-header-title {
+  font-size: 70px;
+  color: #ff8e26;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-top: 30px;
+  margin-left: 50px;
+}
 
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #ff8e26;
+  animation: slideInFromLeft 0.5s ease-in;
+}
 
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: rgb(22, 22, 22); /* Change to your desired track color */
+}
+.pointer-events {
+  pointer-events: auto !important;
+}
+.img-size {
+  object-fit: cover;
+  max-width: 300px;
+  max-height: 200px;
+}
 
-
-  /* experience page */
+/* experience page */
+@media (min-width: 2560px) and (min-width: 1108px) and (min-height: 580px) {
+  .img-experience {
+    width: 700px;
+  }
+  .carousel-control-prev {
+    left: -160px !important;
+  }
+  .carousel-control-next {
+    right: -160px !important;
+  }
   .text-header-title-2 {
     font-size: 40px;
     color: #ff8e26;
@@ -409,14 +410,14 @@
     margin: 30px 100px;
     border: none;
   }
-  
+
   .carousel-control-next-icon {
     padding: 0px;
     margin: 0px;
     color: black;
     background-color: black;
   }
-  
+
   .carousel-control-prev-icon {
     color: black;
     background-color: black;
@@ -424,75 +425,543 @@
   .carousel {
     position: none;
   }
-  
+
   div.card-opacity {
     color: #000000;
   }
-  
+
   .sub-text-info {
     color: black;
   }
- 
-
-/* contact */
-@media (min-width: 2560px) and (min-width: 950px) and (min-height: 580px){
-}
-@media (max-width: 2560px) and (min-width: 950px) {
-}
-@media (max-width: 951px) and (min-width: 726px) {
-}
-@media (max-width: 725px) and (min-width: 200px) {
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
-  /* .hover-card{
-    margin: 10px 10px 150px 10px;
+@media (min-width: 1108px) {
+  .img-experience {
+    width: 600px;
+  }
+  .carousel-control-prev {
+    left: -130px !important;
+  }
+  .carousel-control-next {
+    right: -130px !important;
+  }
+  .text-header-title-2 {
+    font-size: 40px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    margin-left: 50px;
   }
   .card-info {
-    min-width: 30vw;
-    padding: none  !important;
-  } */
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 80px;
+    border: none;
+  }
+
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+
+  div.card-opacity {
+    color: #000000;
+  }
+
+  .sub-text-info {
+    color: black;
+  }
 }
-.name {
-  color: #ff8e26;
-  letter-spacing: 2px;
-  font-size: 40px;
+@media (max-width: 1024px) {
+  .img-experience {
+    width: 400px;
+  }
+  .carousel-control-prev {
+    left: -60px !important;
+  }
+  .carousel-control-next {
+    right: -60px !important;
+  }
+  .text-header-title-2 {
+    font-size: 40px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    margin-left: 50px;
+  }
+  .card-info {
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 30px;
+    border: none;
+  }
+
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+
+  div.card-opacity {
+    color: #000000;
+  }
+
+  .sub-text-info {
+    color: black;
+  }
+}
+@media (max-width: 768px) {
+  .text-title-ex {
+    font-size: 18px;
+    margin: 0px 0px 0px 30px;
+  }
+  .img-experience {
+    width: 400px;
+    margin: 0px 0px 0px -50px;
+  }
+  .carousel-control-prev {
+    left: -60px !important;
+  }
+  .carousel-control-next {
+    right: -60px !important;
+  }
+  .text-header-title-2 {
+    font-size: 40px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    margin-left: 50px;
+  }
+  .card-info {
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 30px;
+    border: none;
+  }
+
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+
+  div.card-opacity {
+    color: #000000;
+  }
+
+  .sub-text-info {
+    color: black;
+  }
+}
+@media (max-width: 768px) {
+  .text-title-ex {
+    font-size: 18px;
+    margin: 0px 0px 0px 30px;
+  }
+  .img-experience {
+    width: 400px;
+    margin: 0px 0px 0px -50px;
+  }
+  .carousel-control-prev {
+    left: -20px !important;
+  }
+  .carousel-control-next {
+    right: -20px !important;
+  }
+  .text-header-title-2 {
+    font-size: 40px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    margin-left: 50px;
+  }
+  .card-info {
+    /* background-color: #F1E1E2; */
+    padding: 20px;
+    margin: 30px 30px;
+    border: none;
+  }
+
+  .carousel-control-next-icon {
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: black;
+  }
+
+  .carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+  }
+  .carousel {
+    position: none;
+  }
+
+  div.card-opacity {
+    color: #000000;
+  }
+
+  .sub-text-info {
+    color: black;
+  }
 }
 
-.surname {
-  color: #ff8e26;
-  letter-spacing: 2px;
-  font-size: 30px;
-  padding-left: 20px;
+/* contact */
+@media (max-width: 2560px) {
+  .card-contact {
+    float: center;
+    max-width: 2000px;
+  }
+  .name {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 40px;
+  }
+
+  .surname {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding-left: 20px;
+  }
+
+  .on-select {
+    background-color: rgba(225, 234, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .text-infomation {
+    color: #ff8e26;
+    font-size: 18px;
+  }
+
+  .bg-grade {
+    background-color: rgba(233, 120, 0, 0.5);
+    border-radius: 8px;
+    padding: 3px 10px 3px 10px;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
+@media (max-width: 1440px) {
+  .address-info {
+    margin: 0px;
+  }
+  .card-contact {
+    float: center;
+    max-width: 1200px;
+  }
+  .card-info-contact {
+    background-color: #fbeee6;
+    width: 250px;
+    height: 180px;
+  }
+  .iframe-contact {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 80px;
+  }
+  .name {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 40px;
+  }
+
+  .surname {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding-left: 20px;
+  }
+
+  .on-select {
+    background-color: rgba(225, 234, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .text-infomation {
+    color: #ff8e26;
+    font-size: 18px;
+  }
+
+  .bg-grade {
+    background-color: rgba(233, 120, 0, 0.5);
+    border-radius: 8px;
+    padding: 3px 10px 3px 10px;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
+@media (max-width: 1024px) {
+  .text-detail {
+    font-size: 14px;
+  }
+  .card-white-info {
+    background-color: #ffff;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+  }
+  .address-info {
+    margin: 0px 0px 0px -20px;
+  }
+  .card-contact {
+    float: center;
+    max-width: 950px;
+  }
+  .card-info-contact {
+    background-color: #fbeee6;
+    width: 200px;
+    height: 180px;
+  }
+  .iframe-contact {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 0px;
+  }
+  .name {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  .surname {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .on-select {
+    background-color: rgba(225, 234, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .text-infomation {
+    color: #ff8e26;
+    font-size: 14px;
+  }
+
+  .bg-grade {
+    background-color: rgba(233, 120, 0, 0.5);
+    border-radius: 8px;
+    padding: 3px 10px 3px 10px;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
+@media (max-width: 768px) {
+  .text-detail {
+    font-size: 12px;
+  }
+  .card-white-info {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 50px;
+  }
+  .address-info {
+    margin: 0px 0px 0px -15px;
+  }
+  .card-contact {
+    float: center;
+    max-width: 950px;
+  }
+  .card-info-contact {
+    background-color: #ff6200;
+    width: 150px;
+    height: 180px;
+  }
+  .iframe-contact {
+    width: 130px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 0px;
+  }
+  .name {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  .surname {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  .on-select {
+    background-color: rgba(225, 234, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .text-infomation {
+    color: #ff8e26;
+    font-size: 14px;
+  }
+  .bg-grade {
+    background-color: rgba(233, 120, 0, 0.5);
+    border-radius: 8px;
+    padding: 3px 10px 3px 10px;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
 }
 
-.on-select {
-  background-color: rgba(225, 234, 249, 0.8);
-  border-radius: 10px;
-  padding: 5px;
-}
-
-.text-infomation {
-  color: #ff8e26;
-  font-size: 18px;
-}
-
-.bg-grade {
-  background-color: rgba(233, 120, 0, 0.5);
-  border-radius: 8px;
-  padding: 3px 10px 3px 10px;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media (max-width: 425px) {
+  .img-contact {
+    max-width: 400px;
+    min-width: 150px;
+    border-radius: 20px;
+  }
+  .text-detail {
+    font-size: 12px;
+  }
+  .card-white-info {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 50px;
+  }
+  .address-info {
+    margin: 0px 0px 0px -15px;
+  }
+  .card-contact {
+    float: center;
+    max-width: 950px;
+  }
+  .card-info-contact {
+    background-color: #ff6200;
+    width: 150px;
+    height: 180px;
+  }
+  .iframe-contact {
+    width: 130px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 0px;
+  }
+  .name {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  .surname {
+    color: #ff8e26;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  .on-select {
+    background-color: rgba(225, 234, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .text-infomation {
+    color: #ff8e26;
+    font-size: 14px;
+  }
+  .bg-grade {
+    background-color: rgba(233, 120, 0, 0.5);
+    border-radius: 8px;
+    padding: 3px 10px 3px 10px;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
 }
