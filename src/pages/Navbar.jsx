@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 function NavBar() {
   return (
     <Navbar bg="light" data-bs-theme="light">
-      <Navbar.Brand href="/home" className="m-4 mt-1 mb-1">
+      <Navbar.Brand href="/home" className="m-4 mt-1 mb-1 nav-brand">
         TITAWAN.UDH
       </Navbar.Brand>
-      <Nav className="me-auto">
+      <Nav className="me-auto nav-menu">
         <Nav.Link href="/skills">SKILLS</Nav.Link>
         <Nav.Link href="/experience">EXPERIENCES</Nav.Link>
         <Nav.Link href="/contact">CONTACT</Nav.Link>

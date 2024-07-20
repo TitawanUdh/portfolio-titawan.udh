@@ -91,44 +91,39 @@ function ContactPage() {
 
         <div className="card-contact mx-auto">
           <Card
-            className="p-4 border-0 "
+            className="p-4 border-0"
             style={{
               backgroundColor: "rgba(225, 234, 249, 0.8)",
             }}
           >
             <Row className="">
               <Col xl={12} sm={12} className="gap-sm-2">
-                <div className="p-3 ">
+                <div className="p-xl-3 ">
                   {data && (
-                    <div className="d-flex justify-content-center">
-                      <div className="col-6 col-sm-12">
-                        <div className="d-flex justify-content-center me-sm-2">
+                    <div className="row">
+                      <div className="col-xl-6 col-sm-12 col-md-6 mb-sm-4">
+                        <div className="d-flex justify-content-center me-sm-2  ">
                           <Image
                             src={data.img}
                             className="img-contact"
-                            // style={{
-                            //   maxWidth: "400px",
-                            //   minWidth: "150px",
-                            //   borderRadius: "20px",
-                            // }}
                           />
                           {console.log("data.img", data.img)}
                         </div>
                       </div>
-                      <div className="col-6 col-sm-12">
-                        <div className="d-flex justify-content-center ">
-                          <Card.Body className="p-4 card-white-info ">
+                      <div className="col-xl-6 col-sm-12 col-md-6 pt-sm-3">
+                        <div className="d-flex justify-content-center">
+                          <Card.Body className="p-4  card-white-info">
                             <Row>
-                              <Col xl={12} md={12}>
+                              <Col xl={12} md={12} sm={12}>
                                 <div className="d-flex">
                                   <div className="col-5 col-md-6 col-sm-12">
-                                    <div className="m-3 mt-2 mb-0 me-0">
+                                    <div className="m-3 mt-2 mb-0 me-0 m-md-2 mb-md-4">
                                       <h2 className="name">{data.name_en}</h2>
                                       <h3 className="surname">
                                         {data.surname_en}
                                       </h3>
                                     </div>
-                                    <div className="m-4 mb-0 text-detail">
+                                    <div className="m-4 m-md-2 mb-0 text-detail">
                                       <p>Age: {data.age}</p>
                                       <p>Date of Birth: {data.birthday}</p>
                                       <p>Gender: {data.gender}</p>
@@ -138,7 +133,7 @@ function ContactPage() {
                                   </div>
 
                                   <div className="col-7 col-md-6 col-sm-12">
-                                    <Card className="border-0 p-4 pb-md-0 pt-3 card-info-contact">
+                                    <Card className="border-0 p-xl-4 pb-md-0 pt-3 card-info-contact">
                                       <Row className="">
                                         <div className="">
                                           <div className="">
@@ -150,19 +145,19 @@ function ContactPage() {
                                               />
                                             </span>
                                           </div>
-                                          <div className="w-100 address-info text-detail">
+                                          <div className="w-100 address-info text-detail ">
                                             <p>{data.address}</p>
                                           </div>
                                         </div>
                                       </Row>
                                     </Card>
 
-                                    <div className="text-detail mt-0 mt-sm-3 pt-0">
-                                      <p>Education:</p>
+                                    <div className="text-detail">
+                                      <p className="edu-info">Education:</p>
                                       {data.education &&
                                         data.education.map((d, i) => (
                                           <div
-                                            className={`d-flex justify-content-start gap-2 align-middle ${
+                                            className={`d-flex justify-content-start gap-2  gap-sm-0 align-middle ${
                                               d.id === onSchool
                                                 ? "on-select"
                                                 : "p-2"
@@ -172,16 +167,16 @@ function ContactPage() {
                                           >
                                             <Image
                                               src={d.img}
-                                              className="m-1 mb-0 me-2"
-                                              style={{
-                                                width: "40px",
-                                                height: "40px",
-                                              }}
+                                              className="m-1 mb-0 me-2 img-edu"
+                                              // style={{
+                                              //   width: "40px",
+                                              //   height: "40px",
+                                              // }}
                                             />
-                                            <div className="d-flex m-1 mt-2 mb-0 me-0">
-                                              <p>
+                                            <div className="d-flex m-1 mt-2 mt-md-0 mb-0 me-0 ">
+                                              <p >
                                                 {d.school}{" "}
-                                                <span className="bg-grade">
+                                                <span className="bg-grade ">
                                                   {d.grade}
                                                 </span>
                                               </p>
