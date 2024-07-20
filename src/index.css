@@ -587,7 +587,13 @@ input[type="range"]::-webkit-slider-runnable-track {
     color: black;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 426px) {
+  .nav-brand{
+    font-size: 12px !important;
+  }
+  .nav-menu{
+    font-size: 10px;
+  }
   .text-title-ex {
     font-size: 18px;
     margin: 0px 0px 0px 30px;
@@ -976,13 +982,19 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 426px) {
+  .nav-brand{
+    font-size: 12px !important;
+  }
+  .nav-menu{
+    font-size: 10px;
+  }
   .img-edu{
     width: 30px;
     height: 30px;
-    padding-top: 5px;
+    padding: 5px 0px 0px 5px;
   }
   .img-contact {
-    width: 250px;
+    width: 280px;
     border-radius: 20px;
   }
   .text-detail {
@@ -994,12 +1006,13 @@ input[type="range"]::-webkit-slider-runnable-track {
     border: none;
     border-radius: 20px;
     width: 50px;
+    margin-top: 20px;
   }
   .address-info {
-    margin: 0px 0px 0px 5px;
+    margin: 0px 0px 0px 25px;
   }
   .edu-info{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 25px;
   }
   .card-contact {
     float: center;
@@ -1011,21 +1024,21 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: 50px;
   }
   .iframe-contact {
-    width: 130px;
+    width: 200px;
     height: 100px;
     border-radius: 10px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 100px;
   }
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
-    font-size: 24px;
+    font-size: 20px;
   }
   .surname {
     color: #ff8e26;
     letter-spacing: 2px;
     font-size: 16px;
-    padding-left: 20px;
+    padding-left: 5px;
   }
   .on-select {
     background-color: rgba(225, 234, 249, 0.8);

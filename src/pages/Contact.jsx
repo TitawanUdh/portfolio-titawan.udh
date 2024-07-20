@@ -114,9 +114,9 @@ function ContactPage() {
                         <div className="d-flex justify-content-center">
                           <Card.Body className="p-4  card-white-info">
                             <Row>
-                              <Col xl={12} md={12} sm={12}>
-                                <div className="d-flex">
-                                  <div className="col-5 col-md-6 col-sm-12">
+                              <Col xl={12} md={12} >
+                                <div className="">
+                                  <div className="col-xl-5 col-md-6 col-sm-12">
                                     <div className="m-3 mt-2 mb-0 me-0 m-md-2 mb-md-4">
                                       <h2 className="name">{data.name_en}</h2>
                                       <h3 className="surname">
@@ -132,7 +132,7 @@ function ContactPage() {
                                     </div>
                                   </div>
 
-                                  <div className="col-7 col-md-6 col-sm-12">
+                                  <div className="col-xl-7 col-md-6 col-sm-12">
                                     <Card className="border-0 p-xl-4 pb-md-0 pt-3 card-info-contact">
                                       <Row className="">
                                         <div className="">

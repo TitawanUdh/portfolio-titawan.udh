@@ -258,7 +258,7 @@ function SkillsPage() {
         backgroundImage: `url(${imgBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "100vh",
+        height: "100%",
       }}
     >
       <div className="text-header-title end-animation" style={{fontSize: '50px'}}>SKILLs</div>
