@@ -309,6 +309,10 @@
     max-width: 600px;
     position: absolute;
   }
+
+  .img-modal{
+    width: 500px;
+  }
 }
 @media (max-width: 1297px) and (min-width: 1165px) {
   .card-img {
@@ -320,6 +324,9 @@
     max-width: 550px;
     position: absolute;
   }
+  .img-modal{
+    width: 500px;
+  }
 }
 @media (max-width: 1166px) and (min-width: 1000px) {
   .card-img {
@@ -330,6 +337,9 @@
     min-width: 20px;
     max-width: 450px;
     position: absolute;
+  }
+  .img-modal{
+    width: 500px;
   }
 }
 @media (max-width: 725px) {
@@ -345,16 +355,9 @@
   .orders-custom-2 {
     order: 2 !important;
   }
-  /* .card-img {
-    min-width: 20;
-    max-width: 350px;
-    position: absolute;
+  .img-modal{
+    width: 300px;
   }
-  .cover-card {
-    min-width: 20px;
-    max-width: 370px;
-    position: absolute;
-  } */
 }
 /* @media (max-width: 425px)  {
   
@@ -676,7 +679,10 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 /* contact */
-@media (max-width: 2560px) {
+@media (max-width: 2560px) and (min-width: 1500px) {
+  .display-info-page{
+    display: flex;
+  }
   .text-header-title {
     font-size: 50px;
     color: #ff8e26;
@@ -687,7 +693,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     margin-left: 50px;
   }
   .iframe-contact {
-    width: 400px;
+    width: 300px;
     height: 150px;
     border-radius: 10px;
     margin: 0px 0px 0px -60px;
@@ -704,11 +710,11 @@ input[type="range"]::-webkit-slider-runnable-track {
     background-color: #ffffff;
     border: none;
     border-radius: 20px;
-    width: 50px;
+    width: 1000px;
+    height: 550px;
   }
   .img-contact{
     width: 400px;
-    background-color: #ffff;
     border-radius: 20px;
   }
   .card-contact {
@@ -726,8 +732,8 @@ input[type="range"]::-webkit-slider-runnable-track {
   .surname {
     color: #ff8e26;
     letter-spacing: 2px;
-    font-size: 30px;
-    padding-left: 20px;
+    font-size: 25px;
+    padding-left: 10px;
   }
 
   .on-select {
@@ -761,39 +767,51 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1440px) and (min-width: 430px){
+  .edu-info{
+    margin: 0px 0px 0px 20px;
+  }
+  .display-info-page{
+    display: flex;
+  }
+  .img-contact{
+    width: 400px;
+    padding-top: 20px;
+    border-radius: 25px;
+  }
   .text-detail{
-    font-size: 16px;
+    font-size: 14px;
   }
   .img-edu{
     width: 40px;
     height: 40px;
+    margin-left: 50px;
     padding-left: -15px;
   }
   .card-white-info {
     background-color: #ffffff;
     border: none;
     border-radius: 20px;
-    width: 50px;
+    width: 1000px;
   }
   .address-info {
-    margin: 0px 0px 0px -20px;
+    margin: 0px 0px 0px 0px;
   }
  
   .card-contact {
     /* float: center; */
-    max-width: 1200px;
+    max-width: 1300px;
   }
   .card-info-contact {
     background-color: #fbeee6;
-    width: 200px;
+    width: 350px;
     height: 150px;
   }
   .iframe-contact {
-    width: 200px;
+    width: 250px;
     height: 150px;
     border-radius: 10px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -50px;
   }
   .name {
     color: #ff8e26;
@@ -839,18 +857,18 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 430px){
   .img-edu{
     width: 40px;
     height: 40px;
     padding-left: -15px;
   }
   .img-contact {
-    width: 435px;
+    width: 330px;
     margin-top: 20px;
   }
   .text-detail {
-    font-size: 14px;
+    font-size: 13px;
   }
   .card-white-info {
     background-color: #ffff;
@@ -859,7 +877,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     width: 80px;
   }
   .address-info {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -15px;
   }
   .card-contact {
     float: center;
@@ -867,11 +885,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
   .card-info-contact {
     background-color: #fbeee6;
-    width: 150px;
+    width: 200px;
     height: 180px;
+    padding: 0px 0px 0px 30px;
   }
   .iframe-contact {
-    width: 150px;
+    width: 200px;
     height: 150px;
     border-radius: 10px;
     margin: 0px 0px 0px 0px;
@@ -884,9 +903,9 @@ input[type="range"]::-webkit-slider-runnable-track {
 
   .surname {
     color: #ff8e26;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 16px;
-    padding-left: 20px;
+    padding-left: 14px;
   }
 
   .on-select {
@@ -920,7 +939,8 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 430px){
+  
   .img-edu{
     width: 25px;
     height: 25px;
@@ -952,7 +972,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     /* overflow: auto; */
   }
   .address-info {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -5px;
   }
   .card-contact {
     /* float: center; */
@@ -971,14 +991,14 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
   .name {
     color: #ff8e26;
-    letter-spacing: 2px;
-    font-size: 25px;
+    letter-spacing: 1px;
+    font-size: 24px;
   }
   .surname {
     color: #ff8e26;
-    letter-spacing: 1px;
-    font-size: 14px;
-    padding-left: 5px;
+    letter-spacing: 0px;
+    font-size: 12px;
+    padding-left: 1px;
   }
   .on-select {
     background-color: rgba(225, 234, 249, 0.8);
@@ -1009,6 +1029,15 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 426px) {
+  .text-header-title {
+    font-size: 30px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 5px;
+    margin-left: 15px;
+  }
   .nav-brand{
     font-size: 12px !important;
   }
@@ -1025,7 +1054,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     border-radius: 20px;
   }
   .text-detail {
-    font-size: 10px;
+    font-size: 14px;
     margin: 0px 0px -20px 0px;
   }
   .card-white-info {
@@ -1051,20 +1080,20 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: 50px;
   }
   .iframe-contact {
-    width: 200px;
+    width: 250px;
     height: 100px;
     border-radius: 10px;
-    margin: 0px 0px 0px 100px;
+    margin: 0px 0px 0px 150px;
   }
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 30px;
   }
   .surname {
     color: #ff8e26;
     letter-spacing: 2px;
-    font-size: 16px;
+    font-size: 22px;
     padding-left: 5px;
   }
   .on-select {
@@ -1120,7 +1149,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     border-radius: 20px;
   }
   .text-detail {
-    font-size: 8px;
+    font-size: 14px;
     margin: 0px 0px -20px 0px;
   }
   .card-white-info {
@@ -1140,11 +1169,11 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
   .card-info-contact {
     background-color: #ffffff;
-    width: 150px;
+    width: 250px;
     height: 50px;
   }
   .iframe-contact {
-    width: 130px;
+    width: 250px;
     height: 100px;
     border-radius: 10px;
     margin: 0px 0px 0px 0px;
@@ -1152,12 +1181,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 30px;
   }
   .surname {
     color: #ff8e26;
     letter-spacing: 1px;
-    font-size: 9px;
+    font-size: 25px;
     padding-left: 5px;
   }
   .on-select {

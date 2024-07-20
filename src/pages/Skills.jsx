@@ -364,7 +364,7 @@ function SkillsPage() {
             okButtonProps={{ hidden: true }}
           >
             <div className="d-flex justify-content-center">
-              <Image src={dataModal} style={{ width: "500px" }} />
+              <Image src={dataModal} className="img-modal" />
             </div>
           </Modal>
         </>
