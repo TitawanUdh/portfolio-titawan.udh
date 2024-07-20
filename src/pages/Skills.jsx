@@ -231,6 +231,7 @@ function SkillsPage() {
   const [dataModal, setDataModal] = useState(false);
 
   const handleClick = (d) => {
+    console.log('d', d);
     setClick(true);
     setDataDetail(d);
     let detailImgMap = d.detailImg.map((img, index) => {
@@ -242,6 +243,7 @@ function SkillsPage() {
   const handleClickImg = (d) => {
     setIsModal(true);
     setDataModal(d ?? []);
+    console.log('d', d)
   };
 
   const handleClose = () => {
@@ -362,7 +364,7 @@ function SkillsPage() {
             okButtonProps={{ hidden: true }}
           >
             <div className="d-flex justify-content-center">
-              <Image src={dataModal?.img} style={{ width: "500px" }} />
+              <Image src={dataModal} style={{ width: "500px" }} />
             </div>
           </Modal>
         </>
