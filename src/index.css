@@ -356,7 +356,7 @@
     position: absolute;
   } */
 }
-@media (max-width: 425px)  {
+/* @media (max-width: 425px)  {
   
 
   .display-phone {
@@ -375,14 +375,14 @@
     min-width: 20;
     max-width: 350px;
     height: 800px;
-    /* position: absolute; */
+    position: absolute;
   }
   .cover-card {
     min-width: 20px;
     max-width: 370px;
     position: absolute;
   }
-}
+} */
 
 .text-header-title {
   font-size: 60px;
