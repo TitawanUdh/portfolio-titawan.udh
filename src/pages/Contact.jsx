@@ -94,12 +94,12 @@ function ContactPage() {
               backgroundColor: "rgba(225, 234, 249, 0.8)",
             }}
           >
-            <Row className="">
-              <Col xl={12} sm={12} className="gap-sm-2">
+            <Row>
+              <Col xl={12} sm={12}>
                 <div className="p-xl-3 ">
                   {data && (
                     <div className="row">
-                      <div className="col-xl-6 col-sm-12 col-md-6 mb-sm-4">
+                      <div className="col-xl-5 col-sm-12 col-md-6 mb-sm-4">
                         <div className="d-flex justify-content-center me-sm-2  ">
                           <Image
                             src={data.img}
@@ -107,9 +107,9 @@ function ContactPage() {
                           />
                         </div>
                       </div>
-                      <div className="col-xl-6 col-sm-12 col-md-5 pt-sm-3">
+                      <div className="col-xl-7 col-sm-12 col-md-6 pt-sm-3">
                         <div className="d-flex justify-content-center">
-                          <Card.Body className="p-4 card-white-info">
+                          <Card className="p-4 card-white-info border-0">
                             <Row>
                               <Col xl={12} md={12} sm={12} >
                                 <div className="display-info-page">
@@ -132,8 +132,8 @@ function ContactPage() {
                                   <div className="col-xl-7 col-md-7 col-sm-12">
                                     <Card className="border-0 p-xl-4 pb-md-0 pt-3 card-info-contact">
                                       <Row className="">
-                                        <div className="">
-                                          <div className="">
+                                        <div>
+                                          <div>
                                             <span className="d-flex justify-content-center mb-3">
                                               <iframe
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.8210928908406!2d100.6073212!3d13.7896562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29defc14fa54f%3A0x4189d0b58b70d4d0!2z4LiL4Lit4LiiIOC4peC4suC4lOC4nuC4o-C5ieC4suC4pyA2OSDguYHguILguKfguIfguKrguLDguJ7guLLguJnguKrguK3guIcg4LmA4LiC4LiV4Lin4Lix4LiH4LiX4Lit4LiH4Lir4Lil4Liy4LiHIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDMxMA!5e0!3m2!1sth!2sth!4v1717310247301!5m2!1sth!2sth"
@@ -142,9 +142,9 @@ function ContactPage() {
                                               />
                                             </span>
                                           </div>
-                                          <div className="w-100 address-info text-detail ">
+                                          {/* <div className="w-100 address-info text-detail ">
                                             <p>{data.address}</p>
-                                          </div>
+                                          </div> */}
                                         </div>
                                       </Row>
                                     </Card>
@@ -185,7 +185,7 @@ function ContactPage() {
                                 </div>
                               </Col>
                             </Row>
-                          </Card.Body>
+                          </Card>
                         </div>
                       </div>
                     </div>
