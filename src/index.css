@@ -364,33 +364,6 @@
     width: 300px;
   }
 }
-/* @media (max-width: 425px)  {
-  
-
-  .display-phone {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .orders-custom-1 {
-    order: 1 !important;
-  }
-
-  .orders-custom-2 {
-    order: 2 !important;
-  }
-  .card-img {
-    min-width: 20;
-    max-width: 350px;
-    height: 800px;
-    position: absolute;
-  }
-  .cover-card {
-    min-width: 20px;
-    max-width: 370px;
-    position: absolute;
-  }
-} */
 
 .text-header-title {
   font-size: 60px;
@@ -944,7 +917,7 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 768px) and (min-width: 430px){
+@media (max-width: 769px){
   
   .img-edu{
     width: 25px;
@@ -972,17 +945,22 @@ input[type="range"]::-webkit-slider-runnable-track {
     background-color: #ffffff;
     border: none;
     border-radius: 20px;
-    width: 330px;
-    /* padding: 20px; */
+    width: 360px ;
+    padding: 5px;
+    margin-left: -10px;
     /* overflow: auto; */
   }
   .address-info {
     margin: 0px 0px 0px -5px;
   }
   .card-contact {
-    /* float: center; */
     width: 700px;
+    /* position: absolute; */
+    background-color: "rgba(225, 234, 249, 0.8)" !important;
   }
+  /* .card-in-contact {
+    padding: 0px;
+  } */
   .card-info-contact {
     background-color: #000000;
     width: 150px;
@@ -1056,7 +1034,8 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
   .img-contact {
     width: 280px;
-    border-radius: 20px;
+    border-radius: 20px 20px 20px 20px;
+    padding-top: 20px;
   }
   .text-detail {
     font-size: 14px;

@@ -37,7 +37,7 @@ function ContactPage() {
       {
         id: 2,
         school: "Srinakharinwirot University",
-        grade: 3.75,
+        grade: 3.57,
         identity: "second honor",
         img: `${imgUniversity}`,
         img_grade: [
@@ -69,7 +69,6 @@ function ContactPage() {
     setDataModel(dataImg);
   };
 
-  console.log("imgModel", imgModel);
 
   const handleClose = () => {
     setOnModel(false);
@@ -82,16 +81,15 @@ function ContactPage() {
           backgroundImage: `url(${imgBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          width: "100%",
+          width: "100vw",
           height: "100%",
           position: "relative",
         }}
       >
         <div className="text-header-title end-animation">Contact</div>
-
-        <div className="card-contact mx-auto">
+        <div className="p-4">
           <Card
-            className="p-4 border-0"
+            className=" border-0 card-contact"
             style={{
               backgroundColor: "rgba(225, 234, 249, 0.8)",
             }}
@@ -107,10 +105,9 @@ function ContactPage() {
                             src={data.img}
                             className="img-contact"
                           />
-                          {console.log("data.img", data.img)}
                         </div>
                       </div>
-                      <div className="col-xl-6 col-sm-12 col-md-6 pt-sm-3">
+                      <div className="col-xl-6 col-sm-12 col-md-5 pt-sm-3">
                         <div className="d-flex justify-content-center">
                           <Card.Body className="p-4 card-white-info">
                             <Row>
