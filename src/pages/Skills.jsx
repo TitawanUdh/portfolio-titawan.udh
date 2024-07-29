@@ -101,12 +101,12 @@ function SkillsPage() {
       detail:
         "I was take a lot of course about graphic when I studying in university and artwork is my hobby, so I alway be fun when I do it",
       detailImg: [
-        {
-          id: 1,
-          img: `${imgCer1}`,
-          detail:
-            "Basic React 4: ฟังก์ชั่น Hook พื้นฐาน (Basic React Hooks)",
-        },
+        // {
+        //   id: 1,
+        //   img: `${imgCer1}`,
+        //   detail:
+        //     "Basic React 4: ฟังก์ชั่น Hook พื้นฐาน (Basic React Hooks)",
+        // },
       ],
     },
     {
