@@ -23,8 +23,6 @@ import imgPhotoP4 from "../images/PIC-P4.jpg";
 import imgPhotoP5 from "../images/PIC-P5.jpg";
 import imgPhotoP6 from "../images/PIC-P6.jpg";
 import imgPhotoP7 from "../images/PIC-P7.jpg";
-import imgPhotoP8 from "../images/PIC-I6.jpg";
-import imgPhotoP9 from "../images/PIC-I7.jpg";
 
 import {
   Button,
@@ -37,7 +35,6 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import { Modal } from "antd";
-import Skillimage from "../components/Skillimage";
 
 function SkillsPage() {
   const skills = [
@@ -231,6 +228,8 @@ function SkillsPage() {
   const [dataModal, setDataModal] = useState(false);
 
   const handleClick = (d) => {
+    setDataImgs();
+
     console.log('d', d);
     setClick(true);
     setDataDetail(d);
@@ -257,11 +256,18 @@ function SkillsPage() {
     <div
       className="background-container"
       style={{
-        backgroundImage: `url(${imgBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100%",
-      }}
+      //   backgroundImage: `url(${imgBg})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   height: "100%",
+      backgroundImage: `url(${imgBg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      width: "100%",
+      height: "100%",
+      position: "relative",
+
+    }}
     >
       <div className="text-header-title end-animation" style={{fontSize: '50px'}}>SKILLs</div>
       <div className="col-12 d-flex display-phone">

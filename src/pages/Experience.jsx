@@ -3,6 +3,8 @@ import imgBg from "../images/background.png";
 import img1 from "../images/personal.jpg";
 import imgPraxicel from "../images/praxical.png";
 import imgCeremic from "../images/ceramic.png";
+import imgAK from '../images/AK-friend.jpg'
+import imgSKY from '../images/HRMS.jpg'
 
 import { Card, Carousel, Col, Image } from "react-bootstrap";
 
@@ -21,6 +23,7 @@ function ExperiencePage() {
       img: `${imgCeremic}`,
       detail: `This website is about Ceramic Studio. It's an online Shop that can show all of the Ceramic products and tell a detail of the product. My responsibilities are coding frontend development. At that time I didn't know about JavaScript I used just HTML and CSS for this project.`
     },
+    
     {
       id: 2,
       title: 'Internship Project',
@@ -30,17 +33,24 @@ function ExperiencePage() {
     },
     {
       id: 3,
-      title: 'WAN THAI INDUSTRY COMPANY',
-      subTitle: 'Project Management',
-      img: `${imgPraxicel}`,
-      detail: `This is my first job in Thailand. My position is Project Management. The project that I handle is the WMS (Warehouse Management Systems) project. I have a chance to design a Wan Thai app for employees to increase comfort in working.`
+      title: 'Work and Travel Program',
+      subTitle: 'I was work and travel in Homer, Alaska, USA',
+      img: `${imgAK}`,
+      detail: `My responsibilities are housekeeping, front desk, and kitchen assistant for 3-4 months, and in the last month of the program I travel`
     },
+    // {
+    //   id: 4,
+    //   title: 'WAN THAI INDUSTRY COMPANY',
+    //   subTitle: 'Project Management',
+    //   img: `${imgPraxicel}`,
+    //   detail: `This is my first job in Thailand. My position is Project Management. The project that I handle is the WMS (Warehouse Management Systems) project. I have a chance to design a Wan Thai app for employees to increase comfort in working.`
+    // },
     {
-      id: 4,
+      id: 5,
       title: 'SKYICT COMPANY',
       subTitle: 'Frontend Developer',
-      img: `${imgPraxicel}`,
-      detail: `I worked at SKYICT as a Developer Frontend. My duty is to create or develop an organization website and we use HTML, CSS, and JavaScript language in the ReactJS library.`
+      img: `${imgSKY}`,
+      detail: `I worked at SKYICT as a Developer Frontend. My duty is to develop an organization website such as HR web, Portal Organize web, and Check in/ check out for employee web. We use HTML, CSS, and JavaScript language in the ReactJS library.`
     },
 
   ]
