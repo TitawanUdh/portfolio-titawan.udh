@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import imgBg from "../images/background.png";
 import imgCer1 from "../images/CER-1.png";
 import imgCer2 from "../images/CER-2.png";
@@ -227,6 +227,11 @@ function SkillsPage() {
   const [isModal, setIsModal] = useState(false);
   const [dataModal, setDataModal] = useState(false);
 
+  useEffect(()=>{
+    setClick(true);
+    setDataDetail(skills[0])
+    console.log('skills', skills[0]);
+  },[])
   const handleClick = (d) => {
     setDataImgs();
 
