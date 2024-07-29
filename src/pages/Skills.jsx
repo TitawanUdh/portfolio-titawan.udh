@@ -234,15 +234,15 @@ function SkillsPage() {
   const [isModal, setIsModal] = useState(false);
   const [dataModal, setDataModal] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     setClick(true);
-    setDataDetail(skills[0])
-    console.log('skills', skills[0]);
-  },[])
+    setDataDetail(skills[0]);
+  }, []);
+
   const handleClick = (d) => {
     setDataImgs();
 
-    console.log('d', d);
+    console.log("d", d);
     setClick(true);
     setDataDetail(d);
     let detailImgMap = d.detailImg.map((img, index) => {
@@ -254,7 +254,7 @@ function SkillsPage() {
   const handleClickImg = (d) => {
     setIsModal(true);
     setDataModal(d ?? []);
-    console.log('d', d)
+    console.log("d", d);
   };
 
   const handleClose = () => {
@@ -268,20 +268,24 @@ function SkillsPage() {
     <div
       className="background-container"
       style={{
-      //   backgroundImage: `url(${imgBg})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   height: "100%",
-      backgroundImage: `url(${imgBg})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      width: "100%",
-      height: "100%",
-      position: "relative",
-
-    }}
+        //   backgroundImage: `url(${imgBg})`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   height: "100%",
+        backgroundImage: `url(${imgBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        width: "100%",
+        height: "100%",
+        position: "relative",
+      }}
     >
-      <div className="text-header-title end-animation" style={{fontSize: '50px'}}>SKILLs</div>
+      <div
+        className="text-header-title end-animation"
+        style={{ fontSize: "50px" }}
+      >
+        SKILLs
+      </div>
       <div className="col-12 d-flex display-phone">
         <div className="col-md-6 col-xl-6 orders-custom-1 col-12">
           <div className="p-5 pt-4">
@@ -381,8 +385,22 @@ function SkillsPage() {
             cancelButtonProps={{ hidden: true }}
             okButtonProps={{ hidden: true }}
           >
-            <div className="d-flex justify-content-center">
-              <Image src={dataModal} className="img-modal" />
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Image
+                src={dataModal}
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  objectFit: "contain",
+                }}
+              />
             </div>
           </Modal>
         </>
