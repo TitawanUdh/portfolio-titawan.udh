@@ -87,7 +87,7 @@ function ContactPage() {
         }}
       >
         <div className="text-header-title end-animation">Contact</div>
-        <div className="p-4">
+        <div className="p-4 d-flex justify-content-center">
           <Card
             className=" border-0 card-contact"
             style={{

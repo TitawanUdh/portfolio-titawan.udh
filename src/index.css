@@ -921,6 +921,7 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
+
 @media (max-width: 769px){
   
   .img-edu{
@@ -1014,7 +1015,98 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-
+@media (max-width: 500px) and  (min-width: 427px) {
+  .img-edu{
+    width: 25px;
+    height: 25px;
+    padding-left: -15px;
+  }
+  .text-header-title {
+    font-size: 40px;
+    color: #ff8e26;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 5px;
+    margin-left: 50px;
+  }
+  .img-contact{
+    width: 260px;
+  }
+  .text-detail {
+    font-size: 10px;
+    /* padding: 0px 0px -10px 0px;
+    margin: 0px 0px -10px 0px; */
+  }
+  .card-white-info {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 320px !important;
+    padding: 5px;
+    margin-left: -10px;
+    /* overflow: auto; */
+  }
+  .address-info {
+    margin: 0px 0px 0px -5px;
+  }
+  .card-contact {
+    width: 700px;
+    /* position: absolute; */
+    background-color: "rgba(225, 234, 249, 0.8)" !important;
+  }
+  /* .card-in-contact {
+    padding: 0px;
+  } */
+  .card-info-contact {
+    background-color: #000000;
+    width: 150px;
+    height: 150px;
+  }
+  .iframe-contact {
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 100px;
+  }
+  .name {
+    color: #ff8e26;
+    letter-spacing: 1px;
+    font-size: 24px;
+  }
+  .surname {
+    color: #ff8e26;
+    letter-spacing: 0px;
+    font-size: 12px;
+    padding-left: 1px;
+  }
+  .on-select {
+    background-color: rgba(225, 234, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .text-infomation {
+    color: #ff8e26;
+    font-size: 12px;
+  }
+  .bg-grade {
+    background-color: rgba(233, 120, 0, 0.5);
+    border-radius: 8px;
+    padding: 2px 10px 3px 10px;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
 @media (max-width: 426px) {
   .text-header-title {
     font-size: 30px;
@@ -1238,7 +1330,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     background-color: #ffffff;
     border: none;
     border-radius: 20px;
-    width: 320px;
+    width: 250px !important;
   }
   .address-info {
     margin: 0px 0px 0px 5px;
@@ -1247,7 +1339,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     margin: 0px 0px 0px 0px;
   }
   .card-contact {
-    width: 350px;
+    width: 300px !important;
   }
   .card-info-contact {
     background-color: #ffffff;
@@ -1255,20 +1347,20 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: 50px;
   }
   .iframe-contact {
-    width: 250px;
+    width: 200px;
     height: 100px;
     border-radius: 10px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 20px;
   }
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
-    font-size: 30px;
+    font-size: 25px;
   }
   .surname {
     color: #ff8e26;
     letter-spacing: 1px;
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 5px;
   }
   .on-select {
