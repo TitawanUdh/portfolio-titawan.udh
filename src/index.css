@@ -349,8 +349,15 @@ body {
   }
 }
 @media (max-width: 500px) and (min-width: 427px) {
+   .nav-brand {
+    font-size: 18px !important;
+  }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
   }
 }
 .text-header-title {
@@ -359,8 +366,9 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 5px;
-  padding-top: 30px;
+  padding-top: 80px;
   margin-left: 50px;
+  
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -408,6 +416,8 @@ input[type="range"]::-webkit-slider-runnable-track {
     padding-top: 20px;
     margin-left: 20px;
     text-align: left !important;
+
+    
   }
 
   .card-info {
@@ -468,6 +478,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     padding-top: 20px;
     margin-left: 20px;
     text-align: left !important;
+    
   }
 
   .card-info {
@@ -527,6 +538,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     padding-top: 20px;
     margin-left: 20px;
     text-align: left !important;
+    
   }
 
   .card-info {
@@ -590,8 +602,8 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-weight: bold;
     letter-spacing: 5px;
     padding-top: 20px;
-    /* margin-left: 3%;  */
     text-align: left !important;
+    
   }
 
   .card-info {
@@ -625,16 +637,27 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 500px) and (min-width: 427px) {
+    .nav-brand {
+    font-size: 18px !important;
+  }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
   }
 }
 @media (max-width: 426px) {
   .nav-brand {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
   }
   .text-title-ex {
     font-size: 18px;
@@ -659,6 +682,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     padding-top: 10%;
     margin-left: 25px;
     text-align: left !important;
+    
   }
 
   .card-info {
@@ -714,9 +738,10 @@ input[type="range"]::-webkit-slider-runnable-track {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 5px;
-  padding-top: 20px;
+  padding-top: 80px;
   margin: 0 0 0px 40px;
   text-align: left;
+  
 }
 
 /* กล่องฟ้าใหญ่ */
@@ -1058,7 +1083,14 @@ input[type="range"]::-webkit-slider-runnable-track {
   .text-detail {
     font-size: 10px;
   }
-
+  .nav-brand {
+    font-size: 18px !important;
+  }
+  .nav-menu {
+    font-size: 14px;
+    gap: 20px;
+    align-items: center;
+  }
   .address-info {
     margin: 0px 0px 0px -5px;
   }
@@ -1102,8 +1134,15 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 500px) and (min-width: 427px) {
+  .nav-brand {
+    font-size: 18px !important;
+  }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
   }
 
   .text-detail {
@@ -1153,11 +1192,15 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 426px) {
-  .nav-brand {
-    font-size: 12px !important;
+   .nav-brand {
+    font-size: 18px !important;
   }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
   }
 
   .text-detail {
@@ -1228,10 +1271,14 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 
   .nav-brand {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
   }
 
   .text-detail {
@@ -1287,10 +1334,14 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 @media (max-width: 321px) {
   .nav-brand {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
   .nav-menu {
-    font-size: 10px;
+    font-size: 14px;
+    text-align: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .text-detail {

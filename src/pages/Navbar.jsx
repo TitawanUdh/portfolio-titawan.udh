@@ -9,16 +9,12 @@ const NavigationBar = () => {
   return (
     <Navbar
       bg="light"
-      expand="md"              // ตั้งให้เริ่มพับเมื่อจอเล็กกว่า md
+      expand="md" // ตั้งให้เริ่มพับเมื่อจอเล็กกว่า md
       className="w-100"
-      fixed="top"              // หรือเอาออก ถ้าไม่อยากให้ลอยติดบนสุด
+      fixed="top" // หรือเอาออก ถ้าไม่อยากให้ลอยติดบนสุด
     >
       <Container fluid>
-        <Navbar.Brand
-          as={Link}
-          to="/home"
-          className="m-4 mt-1 mb-1 nav-brand"
-        >
+        <Navbar.Brand as={Link} to="/home" className="m-2 mt-1 mb-1 nav-brand">
           TITAWAN.UDH
         </Navbar.Brand>
 
@@ -31,21 +27,27 @@ const NavigationBar = () => {
             <Nav.Link
               as={Link}
               to="/skills"
-              className={location.pathname === "/skills" ? "font-weight-bold" : ""}
+              className={
+                location.pathname === "/skills" ? "font-weight-bold" : ""
+              }
             >
               SKILLS
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/experience"
-              className={location.pathname === "/experience" ? "font-weight-bold" : ""}
+              className={
+                location.pathname === "/experience" ? "font-weight-bold" : ""
+              }
             >
               EXPERIENCES
-            </Nav.Link>
+            </Nav.Link>{" "}
             <Nav.Link
               as={Link}
               to="/contact"
-              className={location.pathname === "/contact" ? "font-weight-bold" : ""}
+              className={
+                location.pathname === "/contact" ? "font-weight-bold" : ""
+              }
             >
               CONTACT
             </Nav.Link>

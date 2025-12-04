@@ -278,7 +278,7 @@ function SkillsPage() {
       }}
     >
       <div
-        className="text-header-title end-animation"
+        className="text-header-title end-animation "
         style={{ fontSize: "50px" }}
       >
         SKILLs
