@@ -56,60 +56,60 @@ function ExperiencePage() {
   ]
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${imgBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "100%",
-        position: "relative",
-      }}
-    >
-      <div className="text-header-title-2 end-animation">Experiences</div>
-      <div className="p-3">
-        <Card className="border-0"
-        style={{
-          backgroundColor: "rgba(255, 255, 255, 0.8)"
+     <div
+  className="experience-bg"
+  style={{
+    backgroundImage: `url(${imgBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    width: "100%",
+    minHeight: "100vh",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+  }}
+>
 
-        }}>
-          <Carousel className="card-info">
-            {data.map((d,i) => 
-            <Carousel.Item key={i}>
-              <span
-                style={{
-                  width: "50px",
-                }}
-              >
+      <div className="text-header-title-2 d-flex justify-content-start end-animation">
+        EXPERIENCES
+      </div>
+
+      <div className="p-3 w-100 d-flex justify-content-center">
+        <Card
+          className="border-0 experience-card"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+          }}
+        >
+          <Carousel className="experience-carousel" activeIndex={index} onSelect={handleSelect}>
+            {data.map((d, i) => (
+              <Carousel.Item key={i}>
                 <Col xl={12}>
                   <div className="d-flex row align-items-center">
-                    <Col className="col-xl-6 ">
-                      <div className="p-3">
-                        <Image src={d.img} className="img-experience"  />
+                    <Col className="col-xl-6">
+                      <div className="p-3 d-flex justify-content-center">
+                        <Image src={d.img} className="img-experience" />
                       </div>
                     </Col>
                     <Col className="col-xl-6 d-flex justify-content-center">
                       <div className="align-middle">
                         <div className="text-title-ex">
-                        <h4>{d.title}</h4>
-                        <span className="text-secondary">{d.subTitle}</span></div>
+                          <h4>{d.title}</h4>
+                          <span className="text-secondary">{d.subTitle}</span>
+                        </div>
                         <Card
                           className="card-info"
                           style={{ backgroundColor: "#F1E1E2", border: "none" }}
                         >
-                          <p>
-                            {d.detail}
-                          </p>
+                          <p>{d.detail}</p>
                         </Card>
                       </div>
                     </Col>
                   </div>
                 </Col>
-              </span>
-              
-            </Carousel.Item>
-          )}
-           
+              </Carousel.Item>
+            ))}
           </Carousel>
         </Card>
       </div>

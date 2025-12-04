@@ -69,24 +69,26 @@ function ContactPage() {
     setDataModel(dataImg);
   };
 
-
   const handleClose = () => {
     setOnModel(false);
   };
 
   return (
     <>
-      <div
-        style={{
-          backgroundImage: `url(${imgBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100vw",
-          height: "100%",
-          position: "relative",
-        }}
-      >
-        <div className="text-header-title end-animation">Contact</div>
+   <div
+  className="contact-bg"
+  style={{
+    backgroundImage: `url(${imgBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    width: "100%",
+    minHeight: "100vh",
+  }}
+>
+    <div className="contact-container ">
+
+        <div className="text-header-title-2 end-animation">Contact</div>
         <div className="p-4 d-flex justify-content-center">
           <Card
             className=" border-0 card-contact"
@@ -101,87 +103,73 @@ function ContactPage() {
                     <div className="row">
                       <div className="col-xl-5 col-sm-12 col-md-6 mb-sm-4">
                         <div className="d-flex justify-content-center me-sm-2  ">
-                          <Image
-                            src={data.img}
-                            className="img-contact"
-                          />
+                          <Image src={data.img} className="img-contact" />
                         </div>
                       </div>
                       <div className="col-xl-7 col-sm-12 col-md-6 pt-sm-3">
                         <div className="d-flex justify-content-center">
                           <Card className="p-4 card-white-info border-0">
-                            <Row>
-                              <Col xl={12} md={12} sm={12} >
-                                <div className="display-info-page">
-                                  <div className="col-xl-5 col-md-5 col-sm-12">
-                                    <div className="m-3 mt-2 mb-0 me-0 m-md-2 mb-md-4">
-                                      <h2 className="name">{data.name_en}</h2>
-                                      <h3 className="surname">
-                                        {data.surname_en}
-                                      </h3>
-                                    </div>
-                                    <div className="m-4 m-md-2 mb-0 text-detail">
-                                      <p>Age: {data.age}</p>
-                                      <p>Date of Birth: {data.birthday}</p>
-                                      <p>Gender: {data.gender}</p>
-                                      <p>E-mail: {data.e_mail}</p>
-                                      <p>Phone Number: {data.phone_no}</p>
-                                    </div>
-                                  </div>
+                            <Row className="g-4">
+                              {/* ฝั่งซ้าย : ข้อมูลส่วนตัว */}
+                              <Col lg={6} xs={12}>
+                                <div className="m-3 mt-2 mb-0 me-0 m-md-2 mb-md-4">
+                                  <h2 className="name">{data.name_en}</h2>
+                                  <h3 className="surname">{data.surname_en}</h3>
+                                  <hr className="name-divider" />
+                                </div>
 
-                                  <div className="col-xl-7 col-md-7 col-sm-12">
-                                    <Card className="border-0 p-xl-4 pb-md-0 pt-3 card-info-contact">
-                                      <Row className="">
-                                        <div>
-                                          <div>
-                                            <span className="d-flex justify-content-center mb-3">
-                                              <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.8210928908406!2d100.6073212!3d13.7896562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29defc14fa54f%3A0x4189d0b58b70d4d0!2z4LiL4Lit4LiiIOC4peC4suC4lOC4nuC4o-C5ieC4suC4pyA2OSDguYHguILguKfguIfguKrguLDguJ7guLLguJnguKrguK3guIcg4LmA4LiC4LiV4Lin4Lix4LiH4LiX4Lit4LiH4Lir4Lil4Liy4LiHIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDMxMA!5e0!3m2!1sth!2sth!4v1717310247301!5m2!1sth!2sth"
-                                                className="iframe-contact"
-                                                allowFullScreen={true}
-                                              />
-                                            </span>
-                                          </div>
-                                          {/* <div className="w-100 address-info text-detail ">
-                                            <p>{data.address}</p>
-                                          </div> */}
+                                <div className="m-4 m-md-2 mb-0 text-detail">
+                                  <p>Age: {data.age}</p>
+                                  <p>Date of Birth: {data.birthday}</p>
+                                  <p>Gender: {data.gender}</p>
+                                  <p>E-mail: {data.e_mail}</p>
+                                  <p>Phone Number: {data.phone_no}</p>
+                                </div>
+                              </Col>
+
+                              {/* ฝั่งขวา : แผนที่ + Education */}
+                              <Col lg={6} xs={12}>
+                                <Card className="border-0 p-xl-4 pb-md-0 pt-3 card-info-contact">
+                                  <Row>
+                                    <div>
+                                      <span className="d-flex justify-content-center mb-3">
+                                        <iframe
+                                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.8210928908406!2d100.6073212!3d13.7896562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29defc14fa54f%3A0x4189d0b58b70d4d0!2z4LiL4Lit4LiiIOC4peC4suC4lOC4nuC4o-C5ieC4suC4pyA2OSDguYHguILguKfguIfguKrguLDguJ7guLLguJnguKrguK3guIcg4LmA4LiC4LiV4Lin4Lix4LiH4LiX4Lit4LiH4Lir4Lil4Liy4LiHIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDMxMA!5e0!3m2!1sth!2sth!4v1717310247301!5m2!1sth!2sth"
+                                          className="iframe-contact"
+                                          allowFullScreen={true}
+                                        />
+                                      </span>
+                                    </div>
+                                  </Row>
+                                </Card>
+
+                                <div className="text-detail mt-3">
+                                  <p className="edu-info mb-3">Education:</p>
+
+                                  {data.education &&
+                                    data.education.map((d, i) => (
+                                      <div
+                                        key={i}
+                                        onClick={() => handleModelGrade(d)}
+                                        className={`edu-box d-flex justify-content-between align-items-center ${
+                                          d.id === onSchool ? "on-select" : ""
+                                        }`}
+                                      >
+                                        <div className="edu-main d-flex align-items-center gap-3">
+                                          <Image
+                                            src={d.img}
+                                            className="edu-logo"
+                                          />
+                                          <span className="edu-school">
+                                            {d.school}
+                                          </span>
                                         </div>
-                                      </Row>
-                                    </Card>
 
-                                    <div className="text-detail">
-                                      <p className="edu-info">Education:</p>
-                                      {data.education &&
-                                        data.education.map((d, i) => (
-                                          <div
-                                            className={`d-flex justify-content-start gap-2  gap-sm-0 align-middle ${
-                                              d.id === onSchool
-                                                ? "on-select"
-                                                : "p-2"
-                                            }`}
-                                            key={i}
-                                            onClick={() => handleModelGrade(d)}
-                                          >
-                                            <Image
-                                              src={d.img}
-                                              className="m-1 mb-0 me-2 img-edu"
-                                              // style={{
-                                              //   width: "40px",
-                                              //   height: "40px",
-                                              // }}
-                                            />
-                                            <div className="d-flex m-1 mt-2 mt-md-0 mb-0 me-0 ">
-                                              <p >
-                                                {d.school}{" "}
-                                                <span className="bg-grade ">
-                                                  {d.grade}
-                                                </span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                        ))}
-                                    </div>
-                                  </div>
+                                        <span className="edu-grade">
+                                          {d.grade}
+                                        </span>
+                                      </div>
+                                    ))}
                                 </div>
                               </Col>
                             </Row>
@@ -194,6 +182,7 @@ function ContactPage() {
               </Col>
             </Row>
           </Card>
+        </div>
         </div>
       </div>
       {onModel && (
@@ -208,7 +197,8 @@ function ContactPage() {
             {imgModel.map((d, i) => (
               <div className="row" key={i}>
                 <span className="gap-2 p-3">
-                  <div className=""
+                  <div
+                    className=""
                     style={{
                       width: "100%",
                       display: "flex",

@@ -5,6 +5,7 @@ import imgPersonal from "../images/personal.jpg";
 import { Button } from "react-bootstrap";
 import { GrLinkNext } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
+import ExperiencePage from "./Experience";
 function MainPage() {
   const data = {
     head_title: "portfolio",
@@ -14,78 +15,57 @@ function MainPage() {
   };
   const navigate = useNavigate();
   return (
-    // <div
-    //   style={{
-    //     backgroundImage: `url(${imgBg})`,
-    //     backgroundSize: "cover",
-    //     backgroundPosition: "center",
-    //     width: "100%",
-    //     height: "100vh",
-    //     position: "relative",
-    //   }}
-    // >
     <div
-      className="background-container"
+      className="background-container d-flex align-items-center"
       style={{
         backgroundImage: `url(${imgBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "100%",
-        width: "100%"
+        backgroundRepeat: "no-repeat",
+        height: "100vh",
+        width: "100vw",
       }}
     >
-      <div className="p-5">
-        <div className=" row ">
-          <div className="col-12 d-flex display-phone">
-            <div className="col-md-6 col-xl-6 col-12 orders-custom-2">
-              <span className="d-flex justify-content-center ">
-                <Image
-                  className="border-img animated-image shadow img-personal"
-                  src={imgPersonal}
-                  fluid
-                  style={{
-                    borderRadius: "20px",
-                  }}
-                />
-              </span>
-            </div>
-            <div className="col-md-6 col-xl-6 col-12 orders-custom-1">
-              <div className="align-middle text-custom-end text-port">
-                <span className="text-header-grey position-absolute start-animation">
-                  {data.head_title}
-                </span>
-                <span className="text-header position-absolute start-animation">
-                  {data.head_title}
-                </span>
-              </div>
+<div className="container p-5 pt-1 hero-container">
+        <div className="row d-flex align-items-center">
+          <div className="col-md-6 col-xl-6 col-12 orders-custom-2 text-center">
+            <Image
+              className="border-img animated-image shadow img-personal"
+              src={imgPersonal}
+              fluid
+              style={{ borderRadius: "20px" }}
+            />
+          </div>
 
-              <div className="text-sub-header-name start-animation">
-                {data.name}
-              </div>
-              <div className="text-sub-header-surname mt-0 start-animation">
-                {data.surname}
-              </div>
-              <hr />
-              <div className="text-position bottom-animation">
-                {data.position}
-              </div>
-              <div className="d-flex justify-content-end  mt-4">
-                <Button
-                  className="button-next"
-                  style={{
-                    borderRadius: "20px",
-                    minWidth: "100px",
-                    backgroundColor: "#D341FF",
-                    color: "white",
-                  }}
-                  variant=" shadow"
-                  onClick={() => {
-                    navigate("/skills");
-                  }}
-                >
-                  <span className="text-button">Next</span> <GrLinkNext />
-                </Button>
-              </div>
+          <div className="col-md-6 col-xl-6 col-12 orders-custom-1">
+        
+            <div className="text-port header-wrapper start-animation">
+              <span className="text-header">{data.head_title}</span>
+            </div>
+            <div className="text-sub-header-name start-animation">
+              {data.name}
+            </div>{" "}
+            <div className="text-sub-header-surname mt-0 start-animation">
+              {" "}
+              {data.surname}{" "}
+            </div>
+            <hr />
+            <div className="text-position bottom-animation">
+              {data.position}
+            </div>
+            <div className="d-flex justify-content-end mt-4">
+              <Button
+                className="button-next"
+                style={{
+                  borderRadius: "20px",
+                  minWidth: "100px",
+                  backgroundColor: "#D341FF",
+                  color: "white",
+                }}
+                onClick={() => navigate("/skills")}
+              >
+                <span className="text-button">Next</span> <GrLinkNext />
+              </Button>
             </div>
           </div>
         </div>

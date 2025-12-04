@@ -266,17 +266,14 @@ function SkillsPage() {
   };
   return (
     <div
-      className="background-container"
+      className="background-container skills-bg"
       style={{
-        //   backgroundImage: `url(${imgBg})`,
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   height: "100%",
         backgroundImage: `url(${imgBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "100%",
-        height: "100%",
+            backgroundRepeat: "no-repeat",
+
+        // width: "100vw",
         position: "relative",
       }}
     >

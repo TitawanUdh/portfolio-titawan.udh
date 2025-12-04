@@ -1,3 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-top: 30px; /* ปรับตามความสูง navbar */
+}
+
 .brand-text {
   text-align: left; /* Aligns the text to the left */
 }
@@ -82,231 +91,201 @@
 }
 
 /* main */
-
-@media (min-width: 2560px) and (min-width: 950px) and (min-height: 580px) {
-  .img-personal {
-    /* min-width: 200px; */
-    min-width: 150px;
-    max-width: 400px;
-  }
-  .img-fluid {
-    min-width: 100px;
-    max-width: 550px;
+.text-header {
+  font-size: 82px;
+  color: #ff8e26;
+  text-transform: uppercase;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: end;
+  text-shadow: #4949498e 2px 2px 4px;
+}
+.hero-container {
+  max-width: 1400px; /* เดิม container bootstrap จะเล็กกว่านี้ */
+}
+@media (min-width: 1440px) {
+  .hero-container {
+    max-width: 1600px;
   }
 }
-
-@media (max-width: 2560px) and (min-width: 950px) {
-  .img-personal {
-    margin: 0px 0px 0px 0px;
-    min-width: 100px;
-    max-width: 350px;
-  }
+/* ---------- Desktop (≥ 992px) ---------- */
+@media (min-width: 992px) {
   .img-fluid {
     min-width: 100px !important;
     max-width: 380px !important;
   }
-  .text-port {
-    display: flex;
-    justify-content: end;
+  .img-personal {
+    max-width: 300px;
   }
+
+  .text-port,
+  .text-header,
+  .text-header-grey,
+  .text-sub-header-name,
+  .text-sub-header-surname,
+  .text-position {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
   .text-header {
     font-size: 82px;
     color: #ff8e26;
-    text-transform: uppercase;
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    justify-content: end;
   }
+
   .text-header-grey {
     font-size: 82px;
     color: #646464;
-    text-transform: uppercase;
-    margin: 4px -3px 0px 0px;
-
-    display: flex;
-    justify-content: end;
+    margin-top: 4px;
+    margin-right: -3px;
   }
+
   .text-sub-header-name {
     font-size: 35px;
     color: #ff8e26;
-    text-transform: uppercase;
-
-    margin: 220px 0px 0px 0px;
-    display: flex;
-    justify-content: end;
+    /* margin-top: 120px; */
   }
+
   .text-sub-header-surname {
     font-size: 25px;
     color: #453221;
-    text-transform: uppercase;
     letter-spacing: 5px;
-    /* margin: 0px 0px 0px 890px; */
-    display: flex;
-    justify-content: end;
   }
+
   .text-position {
     font-size: 16px;
-    color: #646464;
-    text-transform: uppercase;
     font-weight: bold;
+    color: #646464;
     letter-spacing: 2px;
-    /* margin: 0px 60px 0px 110px; */
-    /* text-align: end; */
-    display: flex;
-    justify-content: end;
   }
+
   .button-next {
-    margin: 0px 0px 0px 0px;
-  }
-  .text-button {
-    font-size: 16px;
+    margin-top: 15px;
   }
 }
-@media (max-width: 951px) and (min-width: 726px) {
+
+/* ---------- Tablet (768px – 991px) ---------- */
+@media (max-width: 991px) and (min-width: 768px) {
   .img-personal {
-    margin: 0px 0px 0px 0px;
+    max-width: 300px;
+    margin-top: 40px;
   }
-  .text-port {
+
+  .text-port,
+  .text-header,
+  .text-header-grey,
+  .text-sub-header-name,
+  .text-sub-header-surname,
+  .text-position {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    text-align: center;
   }
+
   .text-header {
     font-size: 60px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    justify-content: end;
   }
+
   .text-header-grey {
     font-size: 60px;
-    color: #646464;
-    text-transform: uppercase;
-    margin: 3px -3px 0px 0px;
-
-    display: flex;
-    justify-content: end;
+    margin-top: 3px;
   }
+
   .text-sub-header-name {
-    font-size: 30px;
-    color: #ff8e26;
-    text-transform: uppercase;
-
-    margin: 200px 0px 0px 0px;
-    display: flex;
-    justify-content: end;
+    /* margin-top: 60px; */
+    font-size: 28px;
   }
+
   .text-sub-header-surname {
     font-size: 20px;
-    color: #453221;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    /* margin: 0px 0px 0px 890px; */
-    display: flex;
-    justify-content: end;
+    letter-spacing: 4px;
   }
+
   .text-position {
     font-size: 14px;
-    color: #646464;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    /* margin: 0px 60px 0px 110px; */
-    /* text-align: end; */
-    display: flex;
-    justify-content: end;
-  }
-  .button-next {
-    margin: 0px 0px 0px 0px;
-  }
-  .text-button {
-    font-size: 14px;
+    margin-top: 5px;
   }
 }
 
-@media (max-width: 725px) and (min-width: 200px) {
-  .display-phone {
-    display: flex;
-    flex-direction: column;
-  }
-  @media (max-width: 500px) and  (min-width: 427px) {
-    .nav-menu{
-      font-size: 10px;
-    }
-  }  
+/* ---------- Mobile (< 768px) ---------- */
+@media (max-width: 767px) {
+  /* จัดลำดับให้ชื่อขึ้นก่อนรูป */
   .orders-custom-1 {
     order: 1 !important;
   }
-
   .orders-custom-2 {
     order: 2 !important;
   }
 
+  /* background สูงตามเนื้อหา */
+  .background-container {
+    min-height: 100vh; /* ให้สูงอย่างน้อยเท่าหน้าจอ */
+    /* ลบ height:auto !important ออก หรืออย่าใส่เลย */
+    padding-bottom: 40px;
+  }
+  /* รูปอยู่ตรงกลางและไม่ใหญ่เกิน */
   .img-personal {
-    margin: 50px 0px 0px 0px;
+    max-width: 70%;
+    margin: 30px auto 0 auto;
+    display: block;
   }
 
-  .text-port {
-    display: flex;
-    justify-content: end;
+  /* ข้อความทั้งหมดจัดกลางมือถือ */
+  .text-port,
+  .text-header,
+  .text-header-grey,
+  .text-sub-header-name,
+  .text-sub-header-surname,
+  .text-position {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
   .text-header {
-    font-size: 60px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    margin: 0px;
-    display: flex;
-    justify-content: end;
+    font-size: 48px;
   }
 
   .text-header-grey {
-    font-size: 60px;
-    color: #646464;
-    text-transform: uppercase;
-    margin: 3px -3px 0px 0px;
-    display: flex;
-    justify-content: end;
+    font-size: 48px;
+    margin-top: 2px;
   }
 
   .text-sub-header-name {
-    font-size: 30px;
+    /* margin-top: 40px; */
+    font-size: 28px;
     color: #ff8e26;
-    text-transform: uppercase;
-    margin: 200px 0px 0px 0px;
-    display: flex;
-    justify-content: end;
   }
 
   .text-sub-header-surname {
-    font-size: 20px;
+    font-size: 18px;
     color: #453221;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    display: flex;
-    justify-content: end;
+    letter-spacing: 3px;
   }
 
   .text-position {
-    font-size: 14px;
+    font-size: 13px;
     color: #646464;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: flex;
-    justify-content: end;
+    margin-top: 10px;
   }
 
+  /* ปุ่มเต็มหน้าจอสำหรับมือถือ */
   .button-next {
-    margin: 0px;
-  }
-
-  .text-button {
-    font-size: 14px;
+    width: 100%;
+    display: block;
+    margin-top: 20px !important;
+    border-radius: 20px;
   }
 }
 
 /* Skill Page */
+
+.background-container {
+  min-height: 100vh;
+  padding-bottom: 40px;
+  min-width: 100%;
+}
 
 @media (max-width: 1412px) and (min-width: 1296px) {
   .card-img {
@@ -319,7 +298,7 @@
     position: absolute;
   }
 
-  .img-modal{
+  .img-modal {
     width: 500px;
   }
 }
@@ -333,7 +312,7 @@
     max-width: 550px;
     position: absolute;
   }
-  .img-modal{
+  .img-modal {
     width: 500px;
   }
 }
@@ -347,7 +326,7 @@
     max-width: 450px;
     position: absolute;
   }
-  .img-modal{
+  .img-modal {
     width: 500px;
   }
 }
@@ -365,12 +344,12 @@
   .orders-custom-2 {
     order: 2 !important;
   }
-  .img-modal{
+  .img-modal {
     width: 300px;
   }
 }
-@media (max-width: 500px) and  (min-width: 427px) {
-  .nav-menu{
+@media (max-width: 500px) and (min-width: 427px) {
+  .nav-menu {
     font-size: 10px;
   }
 }
@@ -403,6 +382,14 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 /* experience page */
 @media (min-width: 2560px) and (min-width: 1108px) and (min-height: 580px) {
+  .text-title-ex {
+    margin-left: 0;
+    text-align: center;
+  }
+  .text-title-ex {
+    font-size: 18px;
+    margin: 30px 0px 0px 0px;
+  }
   .img-experience {
     width: 700px;
   }
@@ -419,8 +406,10 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-weight: bold;
     letter-spacing: 5px;
     padding-top: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
+    text-align: left !important;
   }
+
   .card-info {
     /* background-color: #F1E1E2; */
     padding: 20px;
@@ -453,14 +442,22 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 @media (min-width: 1108px) {
+  .text-title-ex {
+    padding-left: 7%;
+    text-align: left;
+  }
+  .text-title-ex {
+    font-size: 18px;
+    margin: 30px 0px 0px 0px;
+  }
   .img-experience {
     width: 600px;
   }
   .carousel-control-prev {
-    left: -130px !important;
+    left: -60px !important;
   }
   .carousel-control-next {
-    right: -130px !important;
+    right: -60px !important;
   }
   .text-header-title-2 {
     font-size: 40px;
@@ -469,8 +466,10 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-weight: bold;
     letter-spacing: 5px;
     padding-top: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
+    text-align: left !important;
   }
+
   .card-info {
     /* background-color: #F1E1E2; */
     padding: 20px;
@@ -502,6 +501,14 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 1024px) {
+  .text-title-ex {
+    padding-left: 7%;
+    text-align: left;
+  }
+  .text-title-ex {
+    font-size: 18px;
+    margin: 30px 0px 0px 0px;
+  }
   .img-experience {
     width: 400px;
   }
@@ -518,8 +525,10 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-weight: bold;
     letter-spacing: 5px;
     padding-top: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
+    text-align: left !important;
   }
+
   .card-info {
     /* background-color: #F1E1E2; */
     padding: 20px;
@@ -551,13 +560,22 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 768px) {
+  .experience-card {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  .text-title-ex {
+    margin-left: 0;
+    text-align: center;
+  }
   .text-title-ex {
     font-size: 18px;
-    margin: 0px 0px 0px 30px;
+    margin: 30px 0px 0px 0px;
   }
   .img-experience {
     width: 400px;
-    margin: 0px 0px 0px -50px;
+    /* margin: 0px 0px 0px -50px; */
   }
   .carousel-control-prev {
     left: -60px !important;
@@ -572,8 +590,10 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-weight: bold;
     letter-spacing: 5px;
     padding-top: 20px;
-    margin-left: 50px;
+    /* margin-left: 3%;  */
+    text-align: left !important;
   }
+
   .card-info {
     /* background-color: #F1E1E2; */
     padding: 20px;
@@ -604,25 +624,25 @@ input[type="range"]::-webkit-slider-runnable-track {
     color: black;
   }
 }
-@media (max-width: 500px) and  (min-width: 427px) {
-  .nav-menu{
+@media (max-width: 500px) and (min-width: 427px) {
+  .nav-menu {
     font-size: 10px;
   }
 }
 @media (max-width: 426px) {
-  .nav-brand{
+  .nav-brand {
     font-size: 12px !important;
   }
-  .nav-menu{
+  .nav-menu {
     font-size: 10px;
   }
   .text-title-ex {
     font-size: 18px;
-    margin: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 0px;
   }
   .img-experience {
-    width: 400px;
-    margin: 0px 0px 0px -50px;
+    width: 200px;
+    /* margin: 0px 0px 0px -50px; */
   }
   .carousel-control-prev {
     left: -20px !important;
@@ -631,14 +651,16 @@ input[type="range"]::-webkit-slider-runnable-track {
     right: -20px !important;
   }
   .text-header-title-2 {
-    font-size: 40px;
+    font-size: 30px;
     color: #ff8e26;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 5px;
-    padding-top: 20px;
-    margin-left: 50px;
+    padding-top: 10%;
+    margin-left: 25px;
+    text-align: left !important;
   }
+
   .card-info {
     /* background-color: #F1E1E2; */
     padding: 20px;
@@ -671,50 +693,193 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 /* contact */
-@media (max-width: 2560px) and (min-width: 1500px) {
-  .display-info-page{
-    display: flex;
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto; /* จัดตรงกลาง */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* พื้นหลัง */
+.contact-bg {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* หัวข้อ CONTACT */
+.text-header-title-2 {
+  /* font-size: 40px; */
+  color: #ff8e26;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-top: 20px;
+  margin: 0 0 0px 40px;
+  text-align: left;
+}
+
+/* กล่องฟ้าใหญ่ */
+.card-contact {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 24px;
+  border-radius: 24px;
+  border: 0;
+  background-color: rgba(225, 234, 249, 0.8);
+}
+
+/* กล่องขาวด้านขวา */
+.card-white-info {
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 0;
+}
+
+/* รูปโปรไฟล์ */
+.img-contact {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 15px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* layout ขวา–ซ้าย */
+.display-info-page {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.display-info-page > .col-xl-5,
+.display-info-page > .col-xl-7 {
+  flex: 1 1 280px;
+}
+
+/* google map */
+.iframe-contact {
+  width: 100%;
+  max-width: 280px;
+  height: 160px;
+  border-radius: 10px;
+  border: 0;
+}
+
+/* text detail ทั่วไป */
+.text-detail {
+  font-size: 14px;
+}
+
+/* ===== Education Section ===== */
+
+.edu-info {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* กล่องโรงเรียนแต่ละอัน */
+.edu-box {
+  background: rgba(225, 234, 249, 0.9);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border 0.15s ease;
+}
+
+.edu-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* กล่องที่ถูกเลือก */
+.edu-box.on-select {
+  background: rgba(255, 185, 98, 0.3) !important;
+  border: 2px solid #ffb460;
+}
+
+/* โลโก้โรงเรียน */
+.edu-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ชื่อโรงเรียน */
+.edu-school {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+/* คะแนน GPA */
+.edu-grade {
+  background: #e3b18f;
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .card-contact {
+    margin: 0 12px 30px 12px;
+    padding: 16px;
   }
-  .text-header-title {
-    font-size: 50px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 20px;
-    margin-left: 50px;
+
+  .img-contact {
+    max-width: 260px;
   }
+
+  .card-white-info {
+    padding: 12px;
+  }
+
+  .text-detail {
+    font-size: 12px;
+  }
+
+  .display-info-page {
+    gap: 16px;
+  }
+
+  .edu-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .edu-grade {
+    align-self: flex-end;
+    margin-top: 4px;
+  }
+
   .iframe-contact {
-    width: 300px;
-    height: 150px;
-    border-radius: 10px;
-    margin: 0px 0px 0px -60px;
+    max-width: 100%;
+    height: 140px;
   }
+}
+
+@media (max-width: 2560px) and (min-width: 1500px) {
   .address-info {
     margin: 0px 0px 0px -30px;
   }
-  .img-edu{
-    width: 40px;
-    height: 40px;
-    padding-left: -15px;
-  }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 1000px;
-    height: 550px;
-  }
-  .img-contact{
-    width: 400px;
-    border-radius: 20px;
-  }
-  .card-contact {
-    /* float: center; */
-    padding: 0px 30px;
-    max-width: 2000px;
-    min-width: 100px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
@@ -729,11 +894,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 
   .on-select {
-    background-color: rgba(225, 234, 249, 0.8);
-    border-radius: 10px;
-    padding: 5px;
+    background: rgba(255, 185, 98, 0.3) !important;
+    border: 2px solid #ffb460;
   }
-
   .text-infomation {
     color: #ff8e26;
     font-size: 18px;
@@ -759,52 +922,19 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 1440px) and (min-width: 430px){
-  .edu-info{
+@media (max-width: 1440px) and (min-width: 430px) {
+  .edu-info {
     margin: 0px 0px 0px 20px;
   }
-  .display-info-page{
-    display: flex;
-  }
-  .img-contact{
-    width: 400px;
-    padding-top: 20px;
-    border-radius: 25px;
-  }
-  .text-detail{
+
+  .text-detail {
     font-size: 14px;
   }
-  .img-edu{
-    width: 40px;
-    height: 40px;
-    margin-left: 50px;
-    padding-left: -15px;
-  }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 1000px;
-  }
+
   .address-info {
     margin: 0px 0px 0px 0px;
   }
- 
-  .card-contact {
-    /* float: center; */
-    max-width: 1300px;
-  }
-  .card-info-contact {
-    background-color: #fbeee6;
-    width: 350px;
-    height: 150px;
-  }
-  .iframe-contact {
-    width: 250px;
-    height: 150px;
-    border-radius: 10px;
-    margin: 0px 0px 0px -50px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
@@ -819,9 +949,8 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 
   .on-select {
-    background-color: rgba(225, 234, 249, 0.8);
-    border-radius: 10px;
-    padding: 5px;
+    background: rgba(255, 185, 98, 0.3) !important;
+    border: 2px solid #ffb460;
   }
 
   .text-infomation {
@@ -849,48 +978,37 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 1025px){
-  .img-edu{
-    width: 40px;
-    height: 40px;
-    padding-left: -15px;
+@media (max-width: 1025px) {
+  .edu-box {
+    display: flex;
+    flex-direction: column !important; /* เรียงบนลงล่าง */
+    align-items: flex-start !important; /* ชิดซ้าย */
+    gap: 8px;
+    padding: 16px 20px;
   }
-  .img-contact {
-    width: 330px;
-    margin-top: 20px;
+
+  /* โลโก้ + ชื่อโรงเรียน อยู่บรรทัดแรก */
+  .edu-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* เกรดอยู่บรรทัดล่าง */
+  .edu-grade {
+    margin-left: 57px; /* ขยับให้ตรงกับข้อความ */
+    margin-top: 4px;
   }
   .text-detail {
     font-size: 13px;
   }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 550px !important;
-    margin-left: -20px;
-    margin-top: 20px;
 
-  }
   .address-info {
     margin: 0px 0px 0px -15px;
   }
-  .card-contact {
-    float: center;
-    max-width: 1050px;
-  }
 
-  .card-info-contact {
-    background-color: #fbeee6;
-    width: 200px;
-    height: 180px;
-    padding: 0px 0px 0px 30px;
-  }
-  .iframe-contact {
-    width: 200px;
-    height: 150px;
-    border-radius: 10px;
-    margin: 0px 0px 0px 0px;
-  }
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
@@ -936,61 +1054,15 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 
-@media (max-width: 769px){
-  
-  .img-edu{
-    width: 25px;
-    height: 25px;
-    padding-left: -15px;
-  }
-  .text-header-title {
-    font-size: 40px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 5px;
-    margin-left: 50px;
-  }
-  .img-contact{
-    width: 260px;
-  }
+@media (max-width: 769px) {
   .text-detail {
     font-size: 10px;
-    /* padding: 0px 0px -10px 0px;
-    margin: 0px 0px -10px 0px; */
   }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 320px !important;
-    padding: 5px;
-    margin-left: -10px;
-    /* overflow: auto; */
-  }
+
   .address-info {
     margin: 0px 0px 0px -5px;
   }
-  .card-contact {
-    width: 700px;
-    /* position: absolute; */
-    background-color: "rgba(225, 234, 249, 0.8)" !important;
-  }
-  /* .card-in-contact {
-    padding: 0px;
-  } */
-  .card-info-contact {
-    background-color: #000000;
-    width: 150px;
-    height: 150px;
-  }
-  .iframe-contact {
-    width: 130px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 0px 0px 0px 0px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 1px;
@@ -1029,63 +1101,19 @@ input[type="range"]::-webkit-slider-runnable-track {
       monospace;
   }
 }
-@media (max-width: 500px) and  (min-width: 427px) {
-  .nav-menu{
+@media (max-width: 500px) and (min-width: 427px) {
+  .nav-menu {
     font-size: 10px;
   }
-  .img-edu{
-    width: 25px;
-    height: 25px;
-    padding-left: -15px;
-  }
-  .text-header-title {
-    font-size: 40px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 5px;
-    margin-left: 50px;
-  }
-  .img-contact{
-    width: 260px;
-  }
+
   .text-detail {
     font-size: 10px;
-    /* padding: 0px 0px -10px 0px;
-    margin: 0px 0px -10px 0px; */
   }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 320px !important;
-    padding: 5px;
-    margin-left: -10px;
-    /* overflow: auto; */
-  }
+
   .address-info {
     margin: 0px 0px 0px -5px;
   }
-  .card-contact {
-    width: 700px;
-    /* position: absolute; */
-    background-color: "rgba(225, 234, 249, 0.8)" !important;
-  }
-  /* .card-in-contact {
-    padding: 0px;
-  } */
-  .card-info-contact {
-    background-color: #000000;
-    width: 150px;
-    height: 150px;
-  }
-  .iframe-contact {
-    width: 250px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 0px 0px 0px 100px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 1px;
@@ -1125,63 +1153,25 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 426px) {
-  .text-header-title {
-    font-size: 30px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 5px;
-    margin-left: 15px;
-  }
-  .nav-brand{
+  .nav-brand {
     font-size: 12px !important;
   }
-  .nav-menu{
+  .nav-menu {
     font-size: 10px;
   }
-  .img-edu{
-    width: 30px;
-    height: 30px;
-    padding: 5px 0px 0px 5px;
-  }
-  .img-contact {
-    width: 280px;
-    border-radius: 20px;
-    margin-top: 20px;
-  }
+
   .text-detail {
     font-size: 14px;
     margin: 0px 0px -20px 0px;
   }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 350px;
-    margin-top: 20px;
-  }
+
   .address-info {
     margin: 0px 0px 0px 25px;
   }
-  .edu-info{
+  .edu-info {
     margin: 0px 0px 0px 25px;
   }
-  .card-contact {
-    float: center;
-    width: 400px;
-  }
-  .card-info-contact {
-    background-color: #ffffff;
-    width: 150px;
-    height: 50px;
-  }
-  .iframe-contact {
-    width: 250px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 0px 0px 0px 95px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
@@ -1221,60 +1211,41 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
 }
 @media (max-width: 376px) {
-  .img-edu{
-    width: 25px;
-    height: 25px;
-    padding-top: 5px;
+  .card-contact {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 24px 0;
+    padding: 16px 12px;
   }
-  .text-header-title {
-    font-size: 30px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 5px;
-    margin-left: 15px;
+
+  .card-white-info {
+    width: 100%;
   }
-.nav-brand{
-  font-size: 12px !important;
-}
-.nav-menu{
-  font-size: 10px;
-}
-  .img-contact {
-    width: 250px;
-    border-radius: 20px;
+
+  .iframe-contact {
+    width: 100%;
+    max-width: 100%;
   }
+
+  .nav-brand {
+    font-size: 12px !important;
+  }
+  .nav-menu {
+    font-size: 10px;
+  }
+
   .text-detail {
     font-size: 14px;
     margin: 0px 0px -20px 0px;
   }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 320px;
-  }
+
   .address-info {
     margin: 0px 0px 0px 5px;
   }
-  .edu-info{
+  .edu-info {
     margin: 0px 0px 0px 0px;
   }
-  .card-contact {
-    width: 350px;
-  }
-  .card-info-contact {
-    background-color: #ffffff;
-    width: 250px;
-    height: 50px;
-  }
-  .iframe-contact {
-    width: 250px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 0px 0px 0px 0px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
@@ -1315,60 +1286,25 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 321px) {
-  .img-edu{
-    width: 25px;
-    height: 25px;
-    padding-top: 5px;
+  .nav-brand {
+    font-size: 12px !important;
   }
-  .text-header-title {
-    font-size: 30px;
-    color: #ff8e26;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding-top: 5px;
-    margin-left: 15px;
+  .nav-menu {
+    font-size: 10px;
   }
-.nav-brand{
-  font-size: 12px !important;
-}
-.nav-menu{
-  font-size: 10px;
-}
-  .img-contact {
-    width: 250px;
-    border-radius: 20px;
-  }
+
   .text-detail {
     font-size: 14px;
     margin: 0px 0px -20px 0px;
   }
-  .card-white-info {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    width: 250px !important;
-  }
+
   .address-info {
     margin: 0px 0px 0px 5px;
   }
-  .edu-info{
+  .edu-info {
     margin: 0px 0px 0px 0px;
   }
-  .card-contact {
-    width: 300px !important;
-  }
-  .card-info-contact {
-    background-color: #ffffff;
-    width: 150px;
-    height: 50px;
-  }
-  .iframe-contact {
-    width: 200px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 0px 0px 0px 20px;
-  }
+
   .name {
     color: #ff8e26;
     letter-spacing: 2px;
@@ -1406,4 +1342,33 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
+}
+
+.edu-box {
+  background: rgba(225, 234, 249, 0.8);
+  border-radius: 20px;
+  padding: 14px 22px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.edu-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.edu-school {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.edu-grade {
+  background: #e3b18f;
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
 }
