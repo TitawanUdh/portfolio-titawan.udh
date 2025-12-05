@@ -221,7 +221,7 @@ body {
   /* background สูงตามเนื้อหา */
   .background-container {
     min-height: 100vh; /* ให้สูงอย่างน้อยเท่าหน้าจอ */
-    padding-top: calc(80px + env(safe-area-inset-top)) !important;
+    padding-top: calc(10px + env(safe-area-inset-top)) !important;
     padding-bottom: 40px;
   }
   /* รูปอยู่ตรงกลางและไม่ใหญ่เกิน */

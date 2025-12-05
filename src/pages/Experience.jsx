@@ -67,7 +67,7 @@ function ExperiencePage() {
       title: "Money Splitter",
       subTitle: "Hobby Project",
       img: `${imgMoney}`,
-      detail: `Free website for calculating personal income tax for expenses, additional investment reports with graphs of taxes to be paid and money left for investments.`,
+      detail: `A Free website for calculating personal income tax for expenses, additional investment reports with graphs of taxes to be paid and money left for investments.`,
     },
   ];
 
@@ -130,6 +130,29 @@ function ExperiencePage() {
               </Carousel.Item>
             ))}
           </Carousel>
+        </Card>
+      </div>
+      <div>
+        <Card className="m-3 p-3 d-flex justify-content-center card-ex-mobile border-0">
+          {data.map((d, i) => (
+            <div key={i}>
+              <div className="p-3 pt-4 pb-2 d-flex justify-content-start">
+                <h3>
+                  {d.id}. {d.title}
+                </h3>
+              </div>
+              <p className="m-3 mt-0 pb-3">{d.subTitle}</p>
+              <hr />
+              <div className="d-flex justify-content-center">
+              <Image className="img-experience" src={d.img} />
+             
+              </div>
+              <div className="m-3 mt-4 mb-5 card-info-mobile">
+               <p>{d.detail}</p></div>
+               <hr />
+            </div>
+            
+          ))}
         </Card>
       </div>
     </div>
