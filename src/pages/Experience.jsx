@@ -7,6 +7,8 @@ import imgCeremic from "../images/ceramic.png";
 import imgAK from "../images/AK-friend.jpg";
 import imgSKY from "../images/HRMS.jpg";
 import imgBioLink from "../images/BioLink.jpg";
+import imgOwnPj from "../images/MoneySplitter.png";
+import imgMoney from "../images/BioLink.png";
 import { Card, Carousel, Col, Image } from "react-bootstrap";
 
 function ExperiencePage() {
@@ -59,6 +61,13 @@ function ExperiencePage() {
       subTitle: "Freelance Project",
       img: `${imgBioLink}`,
       detail: `A small website page that aggregates all of a user's important links (such as other social media links, online store, portfolio, or content) in one place, making it easily accessible to followers from the limited space on their social media profile page.`,
+    },
+    {
+      id: 7,
+      title: "Money Splitter",
+      subTitle: "Hobby Project",
+      img: `${imgMoney}`,
+      detail: `Free website for calculating personal income tax for expenses, additional investment reports with graphs of taxes to be paid and money left for investments.`,
     },
   ];
 
