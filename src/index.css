@@ -221,7 +221,7 @@ body {
   /* background สูงตามเนื้อหา */
   .background-container {
     min-height: 100vh; /* ให้สูงอย่างน้อยเท่าหน้าจอ */
-    padding-top: calc(10px + env(safe-area-inset-top)) !important;
+    padding-top: calc(20% + env(safe-area-inset-top)) !important;
     padding-bottom: 40px;
   }
   /* รูปอยู่ตรงกลางและไม่ใหญ่เกิน */
@@ -375,6 +375,11 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #ff8e26;
   animation: slideInFromLeft 0.5s ease-in;
 }
+
+/* input[type="range"]::-webkit-slider-thumb {
+  background-color: #cc26ff;
+  animation: slideInFromLeft 0.5s ease-in;
+} */
 
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: rgb(22, 22, 22); /* Change to your desired track color */

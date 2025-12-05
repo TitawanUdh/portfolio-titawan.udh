@@ -233,7 +233,7 @@ function SkillsPage() {
   const [dataImgs, setDataImgs] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [dataModal, setDataModal] = useState(false);
-
+  const [onID, setOnID] = useState();
   useEffect(() => {
     setClick(true);
     setDataDetail(skills[0]);
@@ -241,7 +241,7 @@ function SkillsPage() {
 
   const handleClick = (d) => {
     setDataImgs();
-
+    // setOnID(d.id);
     console.log("d", d);
     setClick(true);
     setDataDetail(d);
@@ -271,7 +271,7 @@ function SkillsPage() {
         backgroundImage: `url(${imgBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+        backgroundRepeat: "no-repeat",
 
         // width: "100vw",
         position: "relative",
@@ -294,14 +294,15 @@ function SkillsPage() {
                   <span className="pointer-events">
                     <Form.Range
                       onClick={() => {
-                        handleClick(d);
+                        handleClick(d,setOnID(d.id));
                       }}
-                      className="custom-range animated"
+                      className={`${d.id === onID ? 'custom-ranged' : 'custom-range'} animated `}
                       value={d.percent}
                       id={`range-${d.id}`}
                     />
                   </span>{" "}
                 </div>
+                {console.log('onID', onID, d.id)}
               </>
             ))}{" "}
           </div>
