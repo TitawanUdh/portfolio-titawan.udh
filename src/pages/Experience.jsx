@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import imgBg from "../images/background.png";
 import img1 from "../images/personal.jpg";
 import imgPraxicel from "../images/praxical.png";
+import imgWanThai from "../images/imgWanThai-2.png";
 import imgCeremic from "../images/ceramic.png";
-import imgAK from '../images/AK-friend.jpg'
-import imgSKY from '../images/HRMS.jpg'
-
+import imgAK from "../images/AK-friend.jpg";
+import imgSKY from "../images/HRMS.jpg";
+import imgBioLink from "../images/BioLink.jpg";
 import { Card, Carousel, Col, Image } from "react-bootstrap";
 
 function ExperiencePage() {
@@ -14,63 +15,68 @@ function ExperiencePage() {
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
-  
+
   const data = [
     {
       id: 1,
-      title: 'Ceramic Project',
-      subTitle: 'When I was 3rd year at university',
+      title: "Ceramic Project",
+      subTitle: "When I was 3rd year at university",
       img: `${imgCeremic}`,
-      detail: `This website is about Ceramic Studio. It's an online Shop that can show all of the Ceramic products and tell a detail of the product. My responsibilities are coding frontend development. At that time I didn't know about JavaScript I used just HTML and CSS for this project.`
+      detail: `This website is about Ceramic Studio. It's an online Shop that can show all of the Ceramic products and tell a detail of the product. My responsibilities are coding frontend development. At that time I didn't know about JavaScript I used just HTML and CSS for this project.`,
     },
-    
+
     {
       id: 2,
-      title: 'Internship Project',
-      subTitle: 'Internship program at Praxic company',
+      title: "Internship Project",
+      subTitle: "Internship program at Praxic company",
       img: `${imgPraxicel}`,
-      detail: `My first duty was the meeting minutes report, and then I had a chance to design a little part such as the loading tab. My final internship project is to design and create an Organization website. It makes me know the working process from design, mock-up, and creating the website.`
+      detail: `My first duty was the meeting minutes report, and then I had a chance to design a little part such as the loading tab. My final internship project is to design and create an Organization website. It makes me know the working process from design, mock-up, and creating the website.`,
     },
     {
       id: 3,
-      title: 'Work and Travel Program',
-      subTitle: 'I was work and travel in Homer, Alaska, USA',
+      title: "Work and Travel Program",
+      subTitle: "I was work and travel in Homer, Alaska, USA",
       img: `${imgAK}`,
-      detail: `My responsibilities are housekeeping, front desk, and kitchen assistant for 3-4 months, and in the last month of the program I travel`
+      detail: `My responsibilities are housekeeping, front desk, and kitchen assistant for 3-4 months, and in the last month of the program I travel`,
     },
-    // {
-    //   id: 4,
-    //   title: 'WAN THAI INDUSTRY COMPANY',
-    //   subTitle: 'Project Management',
-    //   img: `${imgPraxicel}`,
-    //   detail: `This is my first job in Thailand. My position is Project Management. The project that I handle is the WMS (Warehouse Management Systems) project. I have a chance to design a Wan Thai app for employees to increase comfort in working.`
-    // },
+    {
+      id: 4,
+      title: "WAN THAI INDUSTRY COMPANY",
+      subTitle: "Project Management",
+      img: `${imgWanThai}`,
+      detail: `This is my first job in Thailand. My position is Project Management. The project that I handle is the WMS (Warehouse Management Systems) project. I have a chance to design a Wan Thai app for employees to increase comfort in working.`,
+    },
     {
       id: 5,
-      title: 'SKYICT COMPANY',
-      subTitle: 'Frontend Developer',
+      title: "SKYICT COMPANY",
+      subTitle: "Frontend Developer",
       img: `${imgSKY}`,
-      detail: `I worked at SKYICT as a Developer Frontend. My duty is to develop an organization website such as HR web, Portal Organize web, and Check in/ check out for employee web. We use HTML, CSS, and JavaScript language in the ReactJS library.`
+      detail: `I worked at SKYICT as a Developer Frontend. My duty is to develop an organization website such as HR web, Portal Organize web, and Check in/ check out for employee web. We use HTML, CSS, and JavaScript language in the ReactJS library.`,
     },
-
-  ]
+    {
+      id: 6,
+      title: "BIO LINK",
+      subTitle: "Freelance Project",
+      img: `${imgBioLink}`,
+      detail: `A small website page that aggregates all of a user's important links (such as other social media links, online store, portfolio, or content) in one place, making it easily accessible to followers from the limited space on their social media profile page.`,
+    },
+  ];
 
   return (
-     <div
-  className="experience-bg"
-  style={{
-    backgroundImage: `url(${imgBg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    width: "100%",
-    minHeight: "100vh",
-    position: "relative",
-    display: "flex",
-    flexDirection: "column",
-  }}
->
-
+    <div
+      className="experience-bg"
+      style={{
+        backgroundImage: `url(${imgBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        minHeight: "100vh",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <div className="text-header-title-2 d-flex justify-content-start end-animation">
         EXPERIENCES
       </div>
@@ -82,7 +88,11 @@ function ExperiencePage() {
             backgroundColor: "rgba(255, 255, 255, 0.8)",
           }}
         >
-          <Carousel className="experience-carousel" activeIndex={index} onSelect={handleSelect}>
+          <Carousel
+            className="experience-carousel"
+            activeIndex={index}
+            onSelect={handleSelect}
+          >
             {data.map((d, i) => (
               <Carousel.Item key={i}>
                 <Col xl={12}>

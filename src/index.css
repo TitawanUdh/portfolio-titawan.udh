@@ -221,7 +221,7 @@ body {
   /* background สูงตามเนื้อหา */
   .background-container {
     min-height: 100vh; /* ให้สูงอย่างน้อยเท่าหน้าจอ */
-    /* ลบ height:auto !important ออก หรืออย่าใส่เลย */
+    /* padding-top: 100px !important;   เลขนี้ปรับตามความสูง navbar */
     padding-bottom: 40px;
   }
   /* รูปอยู่ตรงกลางและไม่ใหญ่เกิน */
@@ -366,7 +366,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 5px;
-  padding-top: 80px;
+  padding-top: 20px;
   margin-left: 50px;
   
 }
@@ -413,7 +413,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 5px;
-    padding-top: 20px;
+    padding-top:20px;
     margin-left: 20px;
     text-align: left !important;
 
@@ -458,7 +458,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   }
   .text-title-ex {
     font-size: 18px;
-    margin: 30px 0px 0px 0px;
+    margin: 30px 0px 0px 30px;
   }
   .img-experience {
     width: 600px;
@@ -679,7 +679,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 5px;
-    padding-top: 10%;
+    padding-top: 20px;
     margin-left: 25px;
     text-align: left !important;
     
@@ -738,7 +738,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 5px;
-  padding-top: 80px;
+  padding-top: 20px;
   margin: 0 0 0px 40px;
   text-align: left;
   
